@@ -1,0 +1,156 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --heavy_blue:#0071AF;
+    --light_blue:#15a5e3;
+    --white:#ffffff;
+    --border:#d8d8d8;
+    --text:#505050;
+}
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: var(--heavy_blue);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 30px;
+    position: relative;
+    right: -10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+
+.label-add-brand{
+    height: 400px;
+    width: 600px;
+    border-style: solid;
+    border-color: #050505;
+    background: #fff;
+    border-width: 1px;
+    position: absolute;
+    left: 330px;
+    top: 50px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px;
+}
+.input-brand, .input-logo{
+    width: 100%;
+    position: relative;
+    top: -12px;
+}
+.label-brand-name, .label-brand-logo, .label-brand-descript{
+    font-size: 14px;
+    position: relative;
+    z-index: 1;
+    border-color: var(--white);
+    /* z-index: 1; */
+    background: var(--white);
+    display: inline;
+    left: 10px;
+    top: -3px;
+}
+.brand-name{
+    position: relative;
+    right: -10px;
+    width: 43%;
+}
+.brand-logo{
+    position: relative;
+    left: -33px;
+    width: 43%;
+    float: right;
+    top: -75px;
+}
+.brand-descript{
+    position: relative;
+    width: 100%;
+    height: 200px;
+    right: -10px;
+}
+.label-brand-descript{
+    position: relative;
+}
+.input-brand-descript{
+    position: relative;
+    top: -65px;
+    width: 93%;
+    height: 150px;
+}
+.buttons{
+    position: relative;
+    right: 10px;
+    float: right;
+}
+.btn-cancel{
+    position: relative;
+    right: 10px;
+    width: 90px;
+    padding: 10px 15px;
+    background: var(--white);
+    border-style: solid;
+    border-color: var(--border);
+    border-width: 1px;
+    border-radius: 5px;
+    color: var(--text);
+    font-weight: 400;
+}
+.btn-create{
+    width: 90px;
+    padding: 10px 10px;
+    background: var(--light_blue);
+    border-style: solid;
+    border-color: var(--light_blue);
+    border-radius: 5px;
+    border-width: 1px;
+    color: var(--white);
+    font-weight: 400;
+}
+.btn-edit{
+    width: 90px;
+    padding: 10px 10px;
+    background: var(--light_blue);
+    border-style: solid;
+    border-color: var(--light_blue);
+    border-radius: 5px;
+    color: var(--white);
+    font-weight: 400;
+    border-width: 1px;
+}
+.btn-drop{
+    text-decoration: none;
+    position: relative;
+    left: -239px;
+    padding: 10px 15px;
+    background: var(--white);
+    border-style: solid;
+    border-width: 1px;
+    border-color: var(--light_blue);
+    border-radius: 5px;
+    color: var(--light_blue);
+    font-weight: 400;
+   
+}
