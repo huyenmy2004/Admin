@@ -92,18 +92,18 @@ if (isset($_GET['submit-search'])) {
 
         
         <div class="search-area">
-        <div class="search-label">Tên thương hiệu</div>
-        <form action="brand-addmin.php" method="GET" style="display:flex;">
-    <input type="text" name="search-brand" class="search-textbox" placeholder="Nhập tên thương hiệu bạn muốn tìm kiếm">
-    <button type="submit" class="btn btn-search" name="submit-search" value="true">Tìm kiếm</button>
-</form>
+                <div class="search-label">Tên thương hiệu</div>
+                <form action="brand-addmin.php" method="GET" style="display:flex;">
+                  <input type="text" name="search-brand" class="search-textbox" placeholder="Nhập tên thương hiệu bạn muốn tìm kiếm">
+                  <button type="submit" class="btn btn-search" name="submit-search" value="true">Tìm kiếm</button>
+                </form>
         
         </div>
     <!--Brand area-->
     <div class="manage-brand">
         <div class="brand-introduce">
 
-        <?php 
+                <?php 
                     if (!empty($brands)) {
                         foreach($brands as $item) {
                     ?>
@@ -118,10 +118,10 @@ if (isset($_GET['submit-search'])) {
                         </div>
                     </div>
                     <?php
+                            }
+                        } else {
+                            echo "Không có dữ liệu thương hiệu.";
                         }
-                    } else {
-                        echo "Không có dữ liệu thương hiệu.";
-                    }
                     ?>
 
         
