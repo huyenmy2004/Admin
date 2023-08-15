@@ -11,28 +11,31 @@ require_once "pdo.php";
     <title>Add New Brand</title>
 </head>
 <body>
-    <div class="label-add-brand">
-        <h1>THÊM THƯƠNG HIỆU MỚI</h1>
-        <form id="add-brand-form" action="process-add-brand.php" method="POST">
-            <div class="brand-name">
-                <label class="label-brand-name">Tên thương hiệu</label>
-                <input type="text" name="input-brand" class="input-brand" placeholder="Nhập tên thương hiệu" required>
-            </div>
-            <div class="brand-logo">
-                <label class="label-brand-logo">Logo</label>
-                <input type="text" name="input-logo" class="input-logo" placeholder="Đính kèm logo" required>
-            </div>
-            <div class="brand-descript">
-                <label class="label-brand-descript">Mô tả</label>
-                <textarea class="input-brand-descript" rows="4" placeholder="Nhập mô tả" required></textarea>
+    <div class="container1">
+        <div class="label-add-brand">
+            <h1>THÊM THƯƠNG HIỆU MỚI</h1>
+            <form id="add-brand-form" action="process-add-brand.php" method="POST">
+                <div class="brand-name">
+                    <label class="label-brand-name">Tên thương hiệu</label>
+                    <input type="text" name="input-brand" class="input-brand" placeholder="Nhập tên thương hiệu" required>
+                </div>
+                <div class="brand-logo">
+                    <label class="label-brand-logo">Logo</label>
+                    <input type="text" name="input-logo" class="input-logo" placeholder="Đính kèm logo" required>
+                </div>
+                <div class="brand-descript">
+                    <label class="label-brand-descript">Mô tả</label>
+                    <textarea class="input-brand-descript" rows="4" placeholder="Nhập mô tả" required></textarea>
 
-            </div>
-            <div class="buttons">
-        <button type="submit" class="btn-create">Thêm mới</button>
-        <button type="button" class="btn-cancel">Hủy bỏ</button>
-    </div>
+                </div>
+                <div class="buttons">
+            <button type="button" class="btn-cancel">Hủy bỏ</button>
+            <button type="submit" class="btn-create">Thêm mới</button>
+            
+        </div>
 
-        </form>
+            </form>
+        </div>
     </div>
 
     
