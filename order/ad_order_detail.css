@@ -47,7 +47,7 @@
     right: 0;
 }
 
-.order-detail-box-option-button .button-delete, .order-detail-box-option-button .button-cancle {
+.order-detail-box-option-button button {
     border-radius: 8px;
     border: 1px solid var(--d-9-d-9-d-9, #15A5E3);
     background: #FFF;
@@ -169,6 +169,19 @@
   font-style: normal;
   font-weight: 500;
   line-height: 20px; /* 142.857% */
+}
+
+.order-list-brand-img {
+  object-fit: cover;
+  width: 137px;
+  height: 28px;
+  flex-shrink: 0;
+}
+
+.order-list-brand-item-img {
+  object-fit: cover;
+  width: auto;
+  height: 65px;
 }
 
 .order-list-brand-title-num {
@@ -385,24 +398,14 @@ line-height: 30px;
 
 .confirm-popup-button .confirm-popup-delete {
   border-radius: 8px;
-  height: 30px;
   background: var(--d-9-d-9-d-9, #15A5E3);
   color: white;
-  border: none;
 }
 
 .button-confirm {
   border-radius: 8px;
   border: 1px solid var(--d-9-d-9-d-9, #BA0122);
   background: #FFF;
-  padding: 10px 16px;
-  color: var(--d-9-d-9-d-9, #BA0122);
-  font-family: Roboto;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  margin-right: 10px;
 }
 
 

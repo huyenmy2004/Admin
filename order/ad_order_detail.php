@@ -173,7 +173,7 @@
                 foreach ($brands as $brand) :   
             ?>
             <div class="order-list-brand">
-                <div class="order-list-brand-img"><img src="../image/image 120.png" alt=""></div>
+                <div class="order-list-brand-img"><img src="<?= $brand['brandLogo'] ?>" alt=""></div>
                 <div>
                     <ul class="order-list-brand-title">
                         <li class="order-list-brand-title-name">Tên sản phẩm</li>
@@ -188,7 +188,7 @@
                 ?>
                 <div class="order-list-brand-detail">
                     <div class="order-list-brand-item">
-                        <img class="order-list-brand-item-img" src="../image/Rectangle 275.png" alt="">
+                        <img class="order-list-brand-item-img" src="<?= $product['imgPath'] ?>" alt="">
                         <div class="order-list-brand-item-des">
                             <span class="order-list-brand-item-title"><?= $product['prodName'] ?></span>
                             <p class="order-list-brand-item-des"><?= $product['prodDescrip'] ?></p>
