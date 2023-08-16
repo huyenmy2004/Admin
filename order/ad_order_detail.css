@@ -155,6 +155,13 @@
   padding: 10px 35px;
 }
 
+.order-list-brand-img span {
+  font-size: 18px; 
+  color: #505050; 
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
 .order-list-brand-title {
   display: flex;
   list-style: none;
