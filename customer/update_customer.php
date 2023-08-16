@@ -6,7 +6,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['approve'])) {
 
     $cusId = $_POST['cusId'];
 
-    // Lấy thông tin mới từ các trường input
+ 
     $newCusName = $_POST['cusName'];
     $newCusContact = $_POST['cusContact'];
     $newCusPhone = $_POST['cusPhone'];
@@ -14,18 +14,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['approve'])) {
     $newcusGPP = $_POST['cusGPP'];
     $newcusGPPDate = $_POST['cusGPPDate'];
     $newcusGPPAddr = $_POST['cusGPPAddr'];
-    // Lấy các thông tin khác tương tự
+ 
 
-    // Cập nhật thông tin mới vào cơ sở dữ liệu
+   
     $updateInfoQuery = "UPDATE customer SET cusName = '$newCusName', cusContact = '$newCusContact', cusPhone = '$newCusPhone', cusAddress ='$newcusAddress', cusGPP = '$newcusGPP', cusGPPDate ='$newcusGPPDate', cusGPPAddr='$newcusGPPAddr' WHERE cusId = '$cusId'";
     $resultUpdate = $conn->query($updateInfoQuery);
 
     if ($resultUpdate) {
-        // Chuyển hướng trở lại trang Customer.php sau khi cập nhật thành công
+        
         header("Location: Customer.php");
         exit();
     } else {
-        // Xử lý trường hợp cập nhật thông tin thất bại
+       
         echo "Cập nhật thông tin thất bại!";
     }
 }

@@ -87,7 +87,7 @@
                     </div>
 
                     <?php
-                        require_once "../connect-db.php";
+                        require_once "./connect-db.php";
 
                         $conn = connectDB();
 
