@@ -34,7 +34,9 @@ $cates = $cate->getData();
 
 <body>
     <div class="flex justify-between">
-        <div class="menu bg-[#0071AF] w-[13%] max-h"></div>
+        <div class="menu bg-[#0071AF] w-[13%] max-h min-h-vh">
+            <?php require_once '../menu.php'; ?>
+        </div>
         <form class="w-[87%]" method="POST" action="action-create.php">
             <!-- Menu -->
             <div
