@@ -1,0 +1,252 @@
+* {
+    margin: 0;
+  }
+
+.sidebar {
+    position: fixed;
+    width: 200px;
+    height: 100%;
+    background: #0071AF;
+    height: 860px;
+    overflow: hidden;
+    flex-direction: column;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.sidebar h1 {
+    color: var(--white, #FFF);
+    font-family: Roboto;
+    font-size: 30px;
+    padding: 30px 0;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 35.5px; /* 118.333% */
+}
+
+.sidebar .sidebar-box ul {
+    list-style: none;
+}
+
+.sidebar .sidebar-box li {
+    width: 155px;
+    height: 45px;
+    color: var(--white, #FFF);
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 35.5px; /* 221.875% */
+    margin-left: 75px;
+    margin-bottom: 15px;
+    padding: 0 20px;
+}
+
+.sidebar.active {
+    display: none;
+    width: 0;
+}
+
+.navbar {
+    position: fixed;
+    display: flex;
+    width: 100%;
+    height: 65px;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    left: 200px;
+    background: #FFF;
+    box-shadow: 0px 4px 18px 0px rgba(0, 0, 0, 0.25);   
+    box-sizing: border-box;
+    z-index: 5;
+}
+
+.navbar .navbar-box {
+    display: flex;
+}
+
+.navbar .navbar-box .navbar-user {
+    position: sticky;
+    align-items: center;
+    display: flex;
+    gap: 5px;
+}
+
+.navbar .navbar-box .navbar-user.active {
+    right: 50px;
+    position: absolute;
+}
+
+.navbar .navbar-box .fa-bars {
+    margin-left: 50px;
+    margin-right: 950px;
+}
+
+
+.navbar.active {
+    left: 0;
+}
+
+.content {
+    position: relative;
+    top: 100px;
+    margin-left: 250px;
+    margin-right: 50px;
+    padding-bottom: 80px;
+}
+
+.content.active {
+    margin-left: 50px;
+}
+
+.status-box {
+    display: flex;
+    align-items: center;
+}
+
+.status-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.status-content select {
+    width: 260px;
+    height: 40px;
+    border: 1px solid #D8D8D8;
+    border-radius: 10px;
+    margin-right: 30px;
+    padding-left: 20px;
+}
+
+.status-date {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.status-date input {
+    width: 260px;
+    height: 40px;
+    border: 1px solid #D8D8D8;
+    border-radius: 10px;
+    margin-right: 30px;
+    padding: 0 20px;
+}
+
+.status-name-user {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.status-name-user input {
+    width: 260px;
+    height: 40px;
+    border: 1px solid #D8D8D8;
+    border-radius: 10px;
+    margin-right: 30px;
+    padding: 0 20px;
+}
+
+.status-box button {
+    border-radius: 8px;
+    background: var(--d-9-d-9-d-9, #0071AF);
+    border: none;
+    color: white;
+    width: 90px;
+    height: 40px;
+}
+
+.status-box span {
+    position: absolute;
+    top: -12px;
+    left: 15px;
+    background-color: white;
+    color: var(--text, #505050);
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding: 5px;
+}
+
+.order-box h1 {
+    color: var(--d-9-d-9-d-9, #0071AF);
+    font-family: Roboto;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 30px; /* 150% */
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    text-align: left;
+}
+
+table, th, td {
+    border-top: 1px solid #D8D8D8 ;
+    border-bottom: 1px solid #D8D8D8 ;
+    border-collapse: collapse;
+    box-shadow: #D8D8D8;
+}
+
+th, td {
+    padding: 20px 0;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:link {
+    color: black
+  }
+  a:visited {
+    color: black
+  }
+
+.order-box-select {
+    box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.15);
+}
+
+.swich-tab {
+    margin-top: 35px;
+    position: absolute;
+    display: flex;
+    right: 0;
+    align-items: center;
+}
+
+.swich-tab span {
+    text-align: center;
+    border: 1px solid #D8D8D8;
+    border-radius: 5px;
+    width: 35px;
+    padding-top: 5px;
+    height: 22px;
+    margin-right: 10px;
+    color: #505050;
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.swich-tab p {
+    color: #505050;
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-right: 20px;
+}
