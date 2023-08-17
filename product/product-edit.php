@@ -47,7 +47,9 @@ $listDeleteImg = [];
         </div>
     </div>
     <div class="flex justify-between">
-        <div class="menu bg-[#0071AF] w-[13%] max-h"></div>
+        <div class="menu bg-[#0071AF] w-[13%] max-h min-h-vh">
+            <?php require_once '../menu.php'; ?>
+        </div>
         <form class="w-[87%]" method="POST" action="action-edit.php">
             <!-- Menu -->
             <div
@@ -329,6 +331,8 @@ $listDeleteImg = [];
 
                 </div>
                 <div class="justify-end flex mt-5">
+                <button type="button" onclick="window.location.href = 'http://localhost/PharmaDI-Admin/product/product-detail.php?prodId=<?= $prod['SKU'] ?>'"
+                        class="text-[12px] border border-[#d8d8d8]  rounded-[6px] px-[14px] py-[7px] mr-3 text-[#505050]">Huỷ bỏ</button>
                     <button type="submit"
                         class="text-[12px] bg-[#15A5E3] text-white rounded-[6px] px-[14px] py-[7px]">Chỉnh sửa</button>
                 </div>

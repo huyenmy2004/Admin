@@ -62,7 +62,9 @@ if (count($products) <= ($page - 1) * $pageSize) {
 
 <body>
     <form method="GET" id='form-product-search' class="flex justify-between">
-        <div class="menu bg-[#0071AF] w-[13%] max-h"></div>
+        <div class="menu bg-[#0071AF] w-[13%] max-h min-h-vh">
+            <?php require_once '../menu.php'; ?>
+        </div>
         <div class="w-[87%]">
             <!--Menu-->
             <div

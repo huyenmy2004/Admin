@@ -3,7 +3,7 @@ require_once "../connect-db.php";
 class Product extends Connection{
     public function getData($name, $status){
         $sql = "SELECT * FROM product " . ($name != null ? "WHERE prodName LIKE '%{$name}%'" . ($status != null ? " AND prodStatus = '$status'" : ' ')
-            : ($status != null ? "WHERE prodStatus = $status" : ' ')) . "ORDER BY prodCreatedDate desc";
+            : ($status != null ? "WHERE prodStatus = $status" : ' ')) . " ORDER BY prodCreatedDate desc";
         $select = $this->prepareSQL($sql);
         $select->execute();
         return $select->fetchAll();
