@@ -36,7 +36,7 @@ $newsArray = $news->newsDetail($_GET['newsId']);
                     onclick="document.getElementById('popupDlt').classList.toggle('hidden')">Huỷ bỏ</button>
                 <button
                     class="bg-[#0071AF] text-white border border-solid text-[13px] border-[#d8d8d8] rounded-[8px] py-[8px] px-[12px]"
-                    onclick="window.location.href='http://localhost/PharmaDI-Admin/news/action-delete.php?newsId=<?= $newsArray['newsId'] ?>'">Xác
+                    onclick="window.location.href='http://localhost/PharmaDI-Admin/news/news-delete.php?newsId=<?= $newsArray['newsId'] ?>'">Xác
                     nhận</button>
             </div>
         </div>
