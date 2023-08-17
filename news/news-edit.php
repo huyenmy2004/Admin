@@ -42,7 +42,9 @@ $newsArray = $news->newsDetail($_GET['newsId']);
         </div>
     </div>
     <form class="flex justify-between" action="action-edit.php?newsId=<?=$_GET['newsId']?>" method="POST">
-        <div class="menu bg-[#0071AF] w-[13%] max-h min-h-[750px]">a</div>
+    <div class="menu bg-[#0071AF] w-[13%] max-h min-h-vh">
+            <?php require_once '../menu.php'; ?>
+        </div>
         <div class="w-[87%]">
             <!-- Menu -->
             <div

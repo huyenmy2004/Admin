@@ -358,7 +358,7 @@ $listDeleteImg = [];
     var file = document.getElementById('image');
 
     function getImage() {
-        file.click(); 
+        file.click();
     }
 
     list = []

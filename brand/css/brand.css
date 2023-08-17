@@ -103,7 +103,7 @@ body{
     pointer-events: none;
 }
 .content{
-    margin-top;
+    /* margin-top; */
 }
 .main{
     display: flex;

@@ -25,7 +25,9 @@ $newsArray = $news->newsDetail($_GET['newsId']);
 
 <body>
     <form class="flex justify-between">
-        <div class="menu bg-[#0071AF] w-[13%] max-h min-h-[750px]"></div>
+    <div class="menu bg-[#0071AF] w-[13%] max-h min-h-vh">
+            <?php require_once '../menu.php'; ?>
+        </div>
         <div class="w-[87%]">
             <!-- Menu -->
             <div
