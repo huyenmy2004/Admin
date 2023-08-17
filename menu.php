@@ -44,7 +44,18 @@
         </div>
     </div>
 </div>
-<div onclick="window.location.href=''" class="relative flex justify-center w-full cursor-pointer z-10 mt-[20px]">
+<div onclick="window.location.href='http://localhost/PharmaDI-Admin/brand/brand-addmin.php'" class="relative flex justify-center w-full cursor-pointer z-10 mt-[20px]">
+    <span class="text-[14px] <?= strpos($url, '/PharmaDI-Admin/brand') ? 'text-blue-700' : 'text-white' ?> py-[10px] z-10">Thương hiệu</span>
+    <div class="absolute w-full h-full ml-[40px] bg-white rounded-l-full z-0 <?= strpos($url, '/PharmaDI-Admin/brand') ? '' : 'hidden' ?>">
+        <div class="absolute w-[20px] h-[20px] -top-[20px] right-[20px] bg-white">
+            <div class="absolute bg-[#0071AF] rounded-full bottom-0 right-0 w-[40px] h-[40px]"></div>
+        </div>
+        <div class="absolute w-[20px] h-[20px] -bottom-[20px] right-[20px] bg-white">
+            <div class="absolute bg-[#0071AF] rounded-full top-0 right-0 w-[40px] h-[40px]"></div>
+        </div>
+    </div>
+</div>
+<div onclick="window.location.href='http://localhost/PharmaDI-Admin/account/account-list.php'" class="relative flex justify-center w-full cursor-pointer z-10 mt-[20px]">
     <span class="text-[14px] <?= strpos($url, '/PharmaDI-Admin/account') ? 'text-blue-700' : 'text-white' ?> py-[10px] z-10">Tài khoản</span>
     <div class="absolute w-full h-full ml-[40px] bg-white rounded-l-full z-0 <?= strpos($url, '/PharmaDI-Admin/account') ? '' : 'hidden' ?>">
         <div class="absolute w-[20px] h-[20px] -top-[20px] right-[20px] bg-white">
@@ -55,7 +66,7 @@
         </div>
     </div>
 </div>
-<div onclick="window.location.href=''" class="relative flex justify-center w-full cursor-pointer z-10 mt-[20px]">
+<div onclick="window.location.href='http://localhost/PharmaDI-Admin/news/news-list.php'" class="relative flex justify-center w-full cursor-pointer z-10 mt-[20px]">
     <span class="text-[14px] <?= strpos($url, '/PharmaDI-Admin/news') ? 'text-blue-700' : 'text-white' ?> py-[10px] z-10">Tin tức</span>
     <div class="absolute w-full h-full ml-[40px] bg-white rounded-l-full z-0 <?= strpos($url, '/PharmaDI-Admin/news') ? '' : 'hidden' ?>">
         <div class="absolute w-[20px] h-[20px] -top-[20px] right-[20px] bg-white">
