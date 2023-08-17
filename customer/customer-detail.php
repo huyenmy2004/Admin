@@ -115,7 +115,7 @@ $cus = $customer->cusDetail($_GET['cusId']);
                 </div>
                 <div class="relative flex justify-between mt-5 w-full">
                     <span class="text-[13px] absolute px-[5px] bg-white -top-[10px] left-[15px]">Địa chỉ</span>
-                    <input type="text" name = "cusAddress" value="<?= $cus['cusName']?>" readonly
+                    <input type="text" name = "cusAddress" value="<?= $cus['cusAddress']?>" readonly
                         class="px-2.5 pl-[20px] py-[8px] w-[100%] border border-solid border-[#d8d8d8] rounded-[6px]  outline-0 text-[13px]">
                 </div>
                 <div class="flex justify-between mt-5">
