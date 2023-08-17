@@ -43,7 +43,9 @@
         </div>
     </div>
     
-    <div class="content">
+    <div class="content" style="
+    margin-left: 210px;
+    margin-top: 100px;">
         <div class="content-menu">
             <span><a href="ad_order.php">Danh sách đơn hàng</a></span>
             <i class="fa-solid fa-angle-right" style="color: #0071AF;"></i>
@@ -191,7 +193,7 @@
                         <img class="order-list-brand-item-img" src="<?= $product['imgPath'] ?>" alt="">
                         <div class="order-list-brand-item-des">
                             <span class="order-list-brand-item-title"><?= $product['prodName'] ?></span>
-                            <p class="order-list-brand-item-des"><?= $product['prodDescrip'] ?></p>
+                            <p class="order-list-brand-item-des"><?= $product['prodUnit'] ?></p>
                         </div>
                         <p class="order-list-brand-item-num"><?= $product['prodNumber'] ?></p>
                         <div class="order-list-brand-item-price"><?= $product['prodOldPrice'] ?></div>
