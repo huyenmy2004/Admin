@@ -59,7 +59,9 @@ $pageSize = isset($_GET['pageSize']) ? $_GET['pageSize'] : 10;
 
 <body>
     <form method="GET" id='form-news-search' class="flex justify-between">
-        <div class="menu bg-[#0071AF] w-[13%] max-h"></div>
+    <div class="menu bg-[#0071AF] w-[13%] max-h min-h-vh">
+            <?php require_once '../menu.php'; ?>
+        </div>
         <div class="w-[87%]">
             <!--Menu-->
             <div
@@ -161,13 +163,13 @@ $pageSize = isset($_GET['pageSize']) ? $_GET['pageSize'] : 10;
                             </span>
                         </div>
                         <div class="flex items-center pl-[10px]">
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                            <svg class="cursor-pointer" width="16" height="16" onclick="document.getElementById('page-product').value = <?= 1 ?>; submitForm('form-news-search')" viewBox="0 0 16 16" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" clip-rule="evenodd"
                                     d="M11.6586 2.95364C11.8683 3.13335 11.8925 3.449 11.7128 3.65866L7.99174 7.99993L11.7128 12.3412C11.8925 12.5509 11.8683 12.8665 11.6586 13.0462C11.4489 13.2259 11.1333 13.2017 10.9536 12.992L6.95357 8.32533C6.79308 8.13808 6.79308 7.86178 6.95357 7.67454L10.9536 3.00787C11.1333 2.79821 11.4489 2.77393 11.6586 2.95364ZM8.99199 2.9537C9.20165 3.13342 9.22594 3.44907 9.04622 3.65873L5.32513 8L9.04622 12.3413C9.22594 12.5509 9.20165 12.8666 8.99199 13.0463C8.78233 13.226 8.46668 13.2017 8.28697 12.9921L4.28697 8.3254C4.12647 8.13815 4.12647 7.86185 4.28697 7.6746L8.28697 3.00794C8.46668 2.79827 8.78233 2.77399 8.99199 2.9537Z"
                                     fill="#505050" />
                             </svg>
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" onclick="slide(false)"
+                            <svg class="cursor-pointer" width="16" height="16" onclick="document.getElementById('page-product').value = <?= $page - 1 ?>; submitForm('form-news-search')" viewBox="0 0 16 16" fill="none" onclick="slide(false)"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" clip-rule="evenodd"
                                     d="M10.3254 2.95371C10.1157 2.77399 9.80007 2.79827 9.62036 3.00794L5.62036 7.6746C5.45987 7.86185 5.45987 8.13815 5.62036 8.3254L9.62036 12.9921C9.80007 13.2017 10.1157 13.226 10.3254 13.0463C10.535 12.8666 10.5593 12.5509 10.3796 12.3413L6.65853 8L10.3796 3.65873C10.5593 3.44907 10.535 3.13342 10.3254 2.95371Z"
@@ -175,22 +177,23 @@ $pageSize = isset($_GET['pageSize']) ? $_GET['pageSize'] : 10;
                             </svg>
                             <div class="w-[100px] overflow-hidden relative h-[20px]">
                                 <div class="flex cursor-pointer" id="container-slide" style="--transitionto:0px">
-                                    <input type="text" class="hidden" name='page' id='page-news' value='<?= $page ?>'>
+                                    <input type="text" class="hidden" name='page' id='page-product'
+                                        value='<?= $page ?>'>
                                     <?php
                                     for ($i = 0; $i <= floor(count($newsArray) / $pageSize); $i++): ?>
                                         <span
-                                            class="text-[13px] px-1 min-w-[20px] min-h-[20px] rounded-full flex justify-center items-center"
-                                            onclick="document.getElementById('page-news').value = <?= $i + 1 ?>; submitForm('form-news-search')"><?= $i + 1 ?></span>
+                                            class="text-[13px] px-1 min-w-[20px] min-h-[20px] rounded-full flex justify-center items-center <?php if($page==$i+1) echo 'bg-[#d8d8d8]' ?>"
+                                            onclick="document.getElementById('page-product').value = <?= $i + 1 ?>; submitForm('form-news-search')"><?= $i + 1 ?></span>
                                     <?php endfor ?>
                                 </div>
                             </div>
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" onclick="slide(true)"
+                            <svg class="cursor-pointer" width="16" height="16" onclick="document.getElementById('page-product').value = <?= $page + 1 ?>; submitForm('form-news-search')" viewBox="0 0 16 16" fill="none" onclick="slide(true)"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" clip-rule="evenodd"
                                     d="M5.67461 2.95371C5.88428 2.77399 6.19993 2.79827 6.37964 3.00794L10.3796 7.6746C10.5401 7.86185 10.5401 8.13815 10.3796 8.3254L6.37964 12.9921C6.19993 13.2017 5.88428 13.226 5.67461 13.0463C5.46495 12.8666 5.44067 12.5509 5.62038 12.3413L9.34147 8L5.62038 3.65873C5.44067 3.44907 5.46495 3.13342 5.67461 2.95371Z"
                                     fill="#505050" />
                             </svg>
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                            <svg class="cursor-pointer" width="16" height="16" onclick="document.getElementById('page-product').value = <?= floor(count($newsArray) / $pageSize) + 1 ?>; submitForm('form-news-search')" viewBox="0 0 16 16" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" clip-rule="evenodd"
                                     d="M4.34115 2.95364C4.55081 2.77393 4.86646 2.79821 5.04617 3.00787L9.04617 7.67454C9.20667 7.86178 9.20667 8.13808 9.04617 8.32533L5.04617 12.992C4.86646 13.2017 4.55081 13.2259 4.34115 13.0462C4.13148 12.8665 4.1072 12.5509 4.28692 12.3412L8.008 7.99993L4.28692 3.65866C4.1072 3.449 4.13148 3.13335 4.34115 2.95364ZM7.00794 2.95371C7.21761 2.77399 7.53326 2.79828 7.71297 3.00794L11.713 7.6746C11.8735 7.86185 11.8735 8.13815 11.713 8.3254L7.71297 12.9921C7.53326 13.2017 7.21761 13.226 7.00794 13.0463C6.79828 12.8666 6.774 12.5509 6.95371 12.3413L10.6748 8L6.95371 3.65873C6.774 3.44907 6.79828 3.13342 7.00794 2.95371Z"
