@@ -4,7 +4,7 @@ $product = new Product();
 if (isset($_GET['search-prodName']) || isset($_GET['search-status']))
     $products = $product->getData($_GET['search-prodName'], $_GET['search-status']);
 else {
-    $products = $product->getData(null, null);
+    $products = $product->getData(null, null); 
 }
 $page = isset($_GET['page']) ? $_GET['page'] : 1;
 $pageSize = isset($_GET['pageSize']) ? $_GET['pageSize'] : 10;

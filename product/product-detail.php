@@ -2,7 +2,7 @@
 <html lang="en">
 <?php
 require_once "product-pdo.php";
-$product = new Product();
+$product = new Product(); 
 $prod = $product->prodDetail($_GET['prodId']);
 $prodImg = $product->prodDetailImg($_GET['prodId']);
 $brand = new Brand();

@@ -1,6 +1,6 @@
 <?php
     require_once 'product-pdo.php';
-    $product = new Product();
+    $product = new Product(); 
     $data = [
         'prodId' => $_POST['prodId'],
         'prodTagId' => $_POST['prodTagId'], 

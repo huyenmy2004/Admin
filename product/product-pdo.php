@@ -8,7 +8,7 @@ class Product extends Connection{
         $select->execute();
         return $select->fetchAll();
     }
-    public function createNewProduct($data){
+    public function createNewProduct($data){ 
         $sql = "INSERT INTO product VALUES (:prodId, :prodTagId, :prodBrandId, :prodCateId, :prodName, :prodCountry, :prodStatus, null, null, null, null, :prodIngredient, :prodDosageForms, :prodUnit, :prodDescript, :prodDosage, :prodPrice, :prodPriceSale, :prodSellNumber);";
         $create = $this->prepareSQL($sql);
         $create->execute($data);
