@@ -108,6 +108,8 @@
 .status-box {
     display: flex;
     align-items: center;
+    margin-top: 50px;
+    margin-left: 50px;
 }
 
 .status-content {
@@ -176,6 +178,10 @@
     font-weight: 400;
     line-height: normal;
     padding: 5px;
+}
+
+.order-box {
+    margin-left: 50px;
 }
 
 .order-box h1 {

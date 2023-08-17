@@ -157,15 +157,7 @@ $products = $getinf->all_ad();
             <?php } ?>
 
 
-            <div class="swich-tab">
-                <span>10</span>
-                <p>Tổng số 2211 kết quả</p>
-                <i class="fa-solid fa-angles-left"></i>
-                <i class="fa-solid fa-angle-left"></i>
-                <button>number</button>
-                <i class="fa-solid fa-angle-right"></i>
-                <i class="fa-solid fa-angles-right"></i>
-            </div>
+            
         </div>
         <script src="ad_order.js"></script>
     </div>
