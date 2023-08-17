@@ -92,11 +92,13 @@
 }
 
 .content {
-    position: relative;
+    width: 87%;
+
+    /* position: relative;
     top: 100px;
     margin-left: 250px;
     margin-right: 50px;
-    padding-bottom: 80px;
+    padding-bottom: 80px; */
 }
 
 .content.active {
