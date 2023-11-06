@@ -28,6 +28,11 @@ if (count($products) <= ($page - 1) * $pageSize) {
         height: 100vh;
         min-height: 100vh;
     }
+    .box{
+        border-radius: 20px;
+        background: #FFF;
+        box-shadow: 0px 4px 40px 0px rgba(0, 0, 0, 0.10);
+    }
 
     .product-list {
         display: flex;
@@ -62,12 +67,12 @@ if (count($products) <= ($page - 1) * $pageSize) {
 
 <body>
     <form method="GET" id='form-product-search' class="flex justify-between">
-        <div class="menu bg-[#0071AF] w-[13%] max-h min-h-vh">
+        <div class="max-h min-h-vh">
             <?php require_once '../menu.php'; ?>
         </div>
-        <div class="w-[87%]">
+        <div class="bg-white m-8 box w-full">
             <!--Menu-->
-            <div
+            <!-- <div
                 class="flex justify-between items-center w-full border-solid border-[#d8d8d8] border pb-2.5 pt-2 shadow-md">
                 <svg class="mx-[40px]" width="30" height="31" viewBox="0 0 30 31" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
@@ -84,7 +89,7 @@ if (count($products) <= ($page - 1) * $pageSize) {
                 <div class="flex justify-between items-center p-[5px] mx-[40px] ">
                     <span style="padding: 0 5px; font-size: 14px; cursor-pointer; color: #0071AF; border: 1px solid #0071AF; border-radius: 8px; padding: 5px 12px" onclick="window.location.href='http://localhost/PharmaDI-Enduser/log-out.php'">Đăng xuất</span>
                 </div>
-            </div>
+            </div> -->
             <!--Search-->
             <div class="flex mt-6 justify-between w-full">
                 <div class="w-full flex justify-between">
