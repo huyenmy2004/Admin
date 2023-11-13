@@ -33,7 +33,7 @@ $countries = json_decode(file_get_contents('https://restcountries.com/v3.1/all')
 
 <body>
     <div class="flex justify-between">
-        <div class="menu bg-[#0071AF] w-[13%] max-h min-h-vh">
+        <div class="menu bg-[#0091D0] w-[13%] max-h min-h-vh">
             <?php require_once '../menu.php'; ?>
         </div>
         <form class="w-[87%]" method="POST" action="action-create.php">
@@ -44,13 +44,13 @@ $countries = json_decode(file_get_contents('https://restcountries.com/v3.1/all')
                     xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd"
                         d="M25.9375 9.25C25.9375 9.76777 25.5178 10.1875 25 10.1875L5 10.1875C4.48223 10.1875 4.0625 9.76777 4.0625 9.25C4.0625 8.73223 4.48223 8.3125 5 8.3125L25 8.3125C25.5178 8.3125 25.9375 8.73223 25.9375 9.25Z"
-                        fill="#0071AF" />
+                        fill="#0091D0" />
                     <path fill-rule="evenodd" clip-rule="evenodd"
                         d="M25.9375 15.5C25.9375 16.0178 25.5178 16.4375 25 16.4375L5 16.4375C4.48223 16.4375 4.0625 16.0178 4.0625 15.5C4.0625 14.9822 4.48223 14.5625 5 14.5625L25 14.5625C25.5178 14.5625 25.9375 14.9822 25.9375 15.5Z"
-                        fill="#0071AF" />
+                        fill="#0091D0" />
                     <path fill-rule="evenodd" clip-rule="evenodd"
                         d="M25.9375 21.75C25.9375 22.2678 25.5178 22.6875 25 22.6875L5 22.6875C4.48223 22.6875 4.0625 22.2678 4.0625 21.75C4.0625 21.2322 4.48223 20.8125 5 20.8125L25 20.8125C25.5178 20.8125 25.9375 21.2322 25.9375 21.75Z"
-                        fill="#0071AF" />
+                        fill="#0091D0" />
                 </svg>
                 <div class="flex justify-between items-center p-[5px] mx-[40px] ">
                     <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -79,18 +79,18 @@ $countries = json_decode(file_get_contents('https://restcountries.com/v3.1/all')
                     <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd"
                             d="M1.09327 0.692102C1.35535 0.467463 1.74991 0.497814 1.97455 0.759893L6.97455 6.59323C7.17517 6.82728 7.17517 7.17266 6.97455 7.40672L1.97455 13.24C1.74991 13.5021 1.35535 13.5325 1.09327 13.3078C0.831188 13.0832 0.800837 12.6886 1.02548 12.4266L5.67684 6.99997L1.02548 1.57338C0.800837 1.3113 0.831188 0.916741 1.09327 0.692102Z"
-                            fill="#0071AF" />
+                            fill="#0091D0" />
                     </svg>
-                    <span class="text-[#0071AF] px-1 font-[600]">Thêm mới sản phẩm</span>
+                    <span class="text-[#0091D0] px-1 font-[600]">Thêm mới sản phẩm</span>
                 </div>
                 <!-- Title -->
-                <span class="text-[19px] font-[600] text-[#0071AF] py-[20px]">THÊM MỚI SẢN PHẨM</span>
+                <span class="text-[19px] font-[600] text-[#0091D0] py-[20px]">THÊM MỚI SẢN PHẨM</span>
                 <!-- Textbox -->
                 <div class="flex justify-between mt-1">
                     <div class="relative">
                         <span class="text-[13px] absolute px-[5px] bg-white -top-[10px] left-[15px]">Mã sản phẩm</span>
                         <input type="text" name="prodId"
-                            class="px-2.5 pl-[20px] py-[8px] w-[280px] border border-solid border-[#d8d8d8] rounded-[6px] focus-within:border-[#0071AF] focus-within:border focus-within:border-solid outline-0 text-[13px]">
+                            class="px-2.5 pl-[20px] py-[8px] w-[280px] border border-solid border-[#d8d8d8] rounded-[6px] focus-within:border-[#0091D0] focus-within:border focus-within:border-solid outline-0 text-[13px]">
                     </div>
                     <div class="relative">
                         <span class="text-[13px] absolute px-[5px] bg-white -top-[10px] left-[15px]">Trạng thái</span>
@@ -104,7 +104,7 @@ $countries = json_decode(file_get_contents('https://restcountries.com/v3.1/all')
                         <span class="text-[13px] absolute px-[5px] bg-white -top-[10px] left-[15px]">Danh mục</span>
                         <input type="text" value="" class="hidden" name="prodCateId">
                         <input type="text"
-                            class="cursor-pointer px-2.5 pl-[20px] py-[8px] w-[280px] border border-solid border-[#d8d8d8] rounded-[6px] focus-within:border-[#0071AF] focus-within:border focus-within:border-solid outline-0 text-[13px]"
+                            class="cursor-pointer px-2.5 pl-[20px] py-[8px] w-[280px] border border-solid border-[#d8d8d8] rounded-[6px] focus-within:border-[#0091D0] focus-within:border focus-within:border-solid outline-0 text-[13px]"
                             readonly>
                         <svg class="absolute right-[10px] top-[11px]" width="15" height="15" viewBox="0 0 15 15"
                             fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -126,7 +126,7 @@ $countries = json_decode(file_get_contents('https://restcountries.com/v3.1/all')
                         <span class="text-[13px] absolute px-[5px] bg-white -top-[10px] left-[15px]">Tag</span>
                         <input type="text" value="" class="hidden" name="prodTagId">
                         <input type="text" readonly
-                            class="px-2.5 cursor-pointer pl-[20px] py-[8px] w-[280px] border border-solid border-[#d8d8d8] rounded-[6px] focus-within:border-[#0071AF] focus-within:border focus-within:border-solid outline-0 text-[13px]">
+                            class="px-2.5 cursor-pointer pl-[20px] py-[8px] w-[280px] border border-solid border-[#d8d8d8] rounded-[6px] focus-within:border-[#0091D0] focus-within:border focus-within:border-solid outline-0 text-[13px]">
                         <svg class="absolute right-[10px] top-[11px]" width="15" height="15" viewBox="0 0 15 15"
                             fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd"
@@ -147,7 +147,7 @@ $countries = json_decode(file_get_contents('https://restcountries.com/v3.1/all')
                 <div class="relative flex justify-between mt-5 w-full">
                     <span class="text-[13px] absolute px-[5px] bg-white -top-[10px] left-[15px]">Tên sản phẩm</span>
                     <input type="text" name="prodName"
-                        class="px-2.5 pl-[20px] py-[8px] w-[100%] border border-solid border-[#d8d8d8] rounded-[6px] focus-within:border-[#0071AF] focus-within:border focus-within:border-solid outline-0 text-[13px]">
+                        class="px-2.5 pl-[20px] py-[8px] w-[100%] border border-solid border-[#d8d8d8] rounded-[6px] focus-within:border-[#0091D0] focus-within:border focus-within:border-solid outline-0 text-[13px]">
                 </div>
                 <div class="flex justify-between mt-5">
                     <div class="relative" onclick="showDroplist('brand-droplist')" id="product-brand">
@@ -156,7 +156,7 @@ $countries = json_decode(file_get_contents('https://restcountries.com/v3.1/all')
                             hiệu</span>
                         <input type="text" value="" class="hidden" name="prodBrandId">
                         <input type="text" readonly
-                            class="cursor-pointer px-2.5 pl-[20px] py-[8px] w-[280px] border border-solid border-[#d8d8d8] rounded-[6px] focus-within:border-[#0071AF] focus-within:border focus-within:border-solid outline-0 text-[13px]">
+                            class="cursor-pointer px-2.5 pl-[20px] py-[8px] w-[280px] border border-solid border-[#d8d8d8] rounded-[6px] focus-within:border-[#0091D0] focus-within:border focus-within:border-solid outline-0 text-[13px]">
                         <svg class="absolute right-[10px] top-[11px]" width="15" height="15" viewBox="0 0 15 15"
                             fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd"
@@ -176,7 +176,7 @@ $countries = json_decode(file_get_contents('https://restcountries.com/v3.1/all')
                     <div class="relative" onclick="showDroplist('country-droplist')" id='product-country'>
                         <span class="text-[13px] absolute px-[5px] bg-white -top-[10px] left-[15px]">Quốc gia</span>
                         <input type="text" readonly name="prodCountry"
-                            class="px-2.5 cursor-pointer pl-[20px] py-[8px] w-[280px] border border-solid border-[#d8d8d8] rounded-[6px] focus-within:border-[#0071AF] focus-within:border focus-within:border-solid outline-0 text-[13px]">
+                            class="px-2.5 cursor-pointer pl-[20px] py-[8px] w-[280px] border border-solid border-[#d8d8d8] rounded-[6px] focus-within:border-[#0091D0] focus-within:border focus-within:border-solid outline-0 text-[13px]">
                         <svg class="absolute right-[10px] top-[11px]" width="15" height="15" viewBox="0 0 15 15"
                             fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd"
@@ -195,7 +195,7 @@ $countries = json_decode(file_get_contents('https://restcountries.com/v3.1/all')
                     <div class="relative">
                         <span class="text-[13px] absolute px-[5px] bg-white -top-[10px] left-[15px]">Đơn vị</span>
                         <input type="text" name="prodUnit"
-                            class="px-2.5 pl-[20px] py-[8px] w-[280px] border border-solid border-[#d8d8d8] rounded-[6px] focus-within:border-[#0071AF] focus-within:border focus-within:border-solid outline-0 text-[13px]">
+                            class="px-2.5 pl-[20px] py-[8px] w-[280px] border border-solid border-[#d8d8d8] rounded-[6px] focus-within:border-[#0091D0] focus-within:border focus-within:border-solid outline-0 text-[13px]">
                     </div>
                     <div class="relative">
                         <span class="text-[13px] absolute px-[5px] bg-white -top-[10px] left-[15px]">Đã bán</span>
@@ -208,34 +208,34 @@ $countries = json_decode(file_get_contents('https://restcountries.com/v3.1/all')
                     <div class="relative flex mt-5">
                         <span class="text-[13px] absolute px-[5px] bg-white -top-[10px] left-[15px]">Giá gốc</span>
                         <input type="text" name="prodPrice"
-                            class="px-2.5 pl-[20px] py-[8px] w-[605px] border border-solid border-[#d8d8d8] rounded-[6px] focus-within:border-[#0071AF] focus-within:border focus-within:border-solid outline-0 text-[13px]">
+                            class="px-2.5 pl-[20px] py-[8px] w-[605px] border border-solid border-[#d8d8d8] rounded-[6px] focus-within:border-[#0091D0] focus-within:border focus-within:border-solid outline-0 text-[13px]">
                     </div>
                     <div class="relative flex mt-5">
                         <span class="text-[13px] absolute px-[5px] bg-white -top-[10px] left-[15px]">Giá khuyến
                             mãi</span>
                         <input type="text" name="prodPriceSale"
-                            class="px-2.5 pl-[20px] py-[8px] w-[605px] border border-solid border-[#d8d8d8] rounded-[6px] focus-within:border-[#0071AF] focus-within:border focus-within:border-solid outline-0 text-[13px]">
+                            class="px-2.5 pl-[20px] py-[8px] w-[605px] border border-solid border-[#d8d8d8] rounded-[6px] focus-within:border-[#0091D0] focus-within:border focus-within:border-solid outline-0 text-[13px]">
                     </div>
                 </div>
                 <div class="relative flex justify-between mt-5 w-full">
                     <span class="text-[13px] absolute px-[5px] bg-white -top-[10px] left-[15px]">Thành phần</span>
                     <textarea name="prodIngredient" id=""
-                        class="h-max min-h-[60px] px-2.5 pl-[20px] py-[8px] w-[100%] border border-solid border-[#d8d8d8] rounded-[6px] focus-within:border-[#0071AF] focus-within:border focus-within:border-solid outline-0 text-[13px] resize-none"></textarea>
+                        class="h-max min-h-[60px] px-2.5 pl-[20px] py-[8px] w-[100%] border border-solid border-[#d8d8d8] rounded-[6px] focus-within:border-[#0091D0] focus-within:border focus-within:border-solid outline-0 text-[13px] resize-none"></textarea>
                 </div>
                 <div class="relative flex justify-between mt-5 w-full">
                     <span class="text-[13px] absolute px-[5px] bg-white -top-[10px] left-[15px]">Dạng bào chế</span>
                     <textarea name="prodDosageForms" id=""
-                        class="h-max min-h-[60px] px-2.5 pl-[20px] py-[8px] w-[100%] border border-solid border-[#d8d8d8] rounded-[6px] focus-within:border-[#0071AF] focus-within:border focus-within:border-solid outline-0 text-[13px] resize-none"></textarea>
+                        class="h-max min-h-[60px] px-2.5 pl-[20px] py-[8px] w-[100%] border border-solid border-[#d8d8d8] rounded-[6px] focus-within:border-[#0091D0] focus-within:border focus-within:border-solid outline-0 text-[13px] resize-none"></textarea>
                 </div>
                 <div class="relative flex justify-between mt-5 w-full">
                     <span class="text-[13px] absolute px-[5px] bg-white -top-[10px] left-[15px]">Liều dùng</span>
                     <textarea name="prodDosage" id=""
-                        class="h-max min-h-[60px] px-2.5 pl-[20px] py-[8px] w-[100%] border border-solid border-[#d8d8d8] rounded-[6px] focus-within:border-[#0071AF] focus-within:border focus-within:border-solid outline-0 text-[13px] resize-none"></textarea>
+                        class="h-max min-h-[60px] px-2.5 pl-[20px] py-[8px] w-[100%] border border-solid border-[#d8d8d8] rounded-[6px] focus-within:border-[#0091D0] focus-within:border focus-within:border-solid outline-0 text-[13px] resize-none"></textarea>
                 </div>
                 <div class="relative flex justify-between mt-5 w-full">
                     <span class="text-[13px] absolute px-[5px] bg-white -top-[10px] left-[15px]">Mô tả sản phẩm</span>
                     <textarea name="prodDescript" id=""
-                        class="h-max min-h-[100px] px-2.5 pl-[20px] py-[8px] w-[100%] border border-solid border-[#d8d8d8] rounded-[6px] focus-within:border-[#0071AF] focus-within:border focus-within:border-solid outline-0 text-[13px] resize-none"></textarea>
+                        class="h-max min-h-[100px] px-2.5 pl-[20px] py-[8px] w-[100%] border border-solid border-[#d8d8d8] rounded-[6px] focus-within:border-[#0091D0] focus-within:border focus-within:border-solid outline-0 text-[13px] resize-none"></textarea>
                 </div>
                 <!-- Upload picture -->
                 <div class="flex">

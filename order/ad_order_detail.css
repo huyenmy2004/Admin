@@ -18,7 +18,7 @@
 
 .content-menu p {
     padding-left: 5px;
-    color: var(--d-9-d-9-d-9, #0071AF);
+    color: var(--d-9-d-9-d-9, #0091D0);
     font-family: Roboto;
     font-size: 14px;
     font-style: normal;
@@ -34,7 +34,7 @@
 .order-detail-box-option h1 {
     margin-top: 20px;
     margin-bottom: 30px;
-    color: var(--d-9-d-9-d-9, #0071AF);
+    color: var(--d-9-d-9-d-9, #0091D0);
     font-family: Roboto;
     font-size: 20px;
     font-style: normal;
@@ -52,7 +52,7 @@
     border: 1px solid var(--d-9-d-9-d-9, #15A5E3);
     background: #FFF;
     padding: 10px 16px;
-    color: var(--d-9-d-9-d-9, #0071AF);
+    color: var(--d-9-d-9-d-9, #0091D0);
     font-family: Roboto;
     font-size: 14px;
     font-style: normal;
@@ -282,7 +282,7 @@ line-height: 20px; /* 142.857% */
 .order-list-brand-item-price {
   position: absolute;
   right: 50px;
-  color: var(--d-9-d-9-d-9, #0071AF);
+  color: var(--d-9-d-9-d-9, #0091D0);
   font-family: Roboto;
   font-size: 14px;
   font-style: normal;
@@ -341,7 +341,7 @@ line-height: 30px;
 .total-detail {
   position: relative;
   margin-left: auto;
-  color: var(--d-9-d-9-d-9, #0071AF);
+  color: var(--d-9-d-9-d-9, #0091D0);
   font-family: Roboto;
   font-size: 16px;
   font-style: normal;
@@ -367,7 +367,7 @@ line-height: 30px;
 }
 
 .confirm-popup span, .confirm-delete-popup span, .confirm-order-popup span {
-  color: var(--d-9-d-9-d-9, #0071AF);
+  color: var(--d-9-d-9-d-9, #0091D0);
   font-family: Roboto;
   font-size: 20px;
   font-style: normal;

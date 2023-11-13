@@ -69,7 +69,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["changePasswordBtn"])) 
         }
 
         .button-pop-up button {
-            background-color: #0071AF;
+            background-color: #0091D0;
             color: white;
             padding: 10px 20px;
             border: none;

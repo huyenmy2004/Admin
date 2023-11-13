@@ -21,7 +21,7 @@
 <body>
     <div class="navbar">
         <div class="navbar-box">
-            <i class="fa-solid fa-bars active" style="color: #0071AF;"></i>
+            <i class="fa-solid fa-bars active" style="color: #0091D0;"></i>
             <div class="navbar-user">
                 <i class="fa-regular fa-circle-user"></i>
                 <span>huyenmy</span>
@@ -48,7 +48,7 @@
     margin-top: 100px;">
         <div class="content-menu">
             <span><a href="ad_order.php">Danh sách đơn hàng</a></span>
-            <i class="fa-solid fa-angle-right" style="color: #0071AF;"></i>
+            <i class="fa-solid fa-angle-right" style="color: #0091D0;"></i>
             <p>Chi tiết đơn hàng</p>
         </div>
         <div class="order-detail-box-option">

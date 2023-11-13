@@ -10,7 +10,6 @@
         'cusGPP'=> $_POST['cusGPP'],
         'cusGPPDate' => $_POST['cusGPPDate'],
         'cusGPPAddr' => $_POST['cusGPPAddr'],
-        'cusStatus' => $_POST['cusStatus']
     ];
     $customer->cusUpdate($data);
     header("Location: http://localhost/PharmaDI-Admin/customer/customer-list.php");

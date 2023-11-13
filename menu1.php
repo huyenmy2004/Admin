@@ -9,7 +9,7 @@ $url .= $_SERVER['HTTP_HOST'];
 // Append the requested resource location to the URL   
 $url .= $_SERVER['REQUEST_URI'];
 ?>
-<div class="min-h-[715px] bg-[#0071AF]">
+<div class="min-h-[715px] bg-[#0091D0]">
     <div class="text-white text-[28px] pt-[35px] pb-4 text-center z-20">PHARMADI</div>
     <div onclick="window.location.href='http://localhost/PharmaDI-Admin/product/product-list.php'"
         class="relative flex justify-center w-full cursor-pointer z-10 mt-[20px]">
@@ -19,10 +19,10 @@ $url .= $_SERVER['REQUEST_URI'];
         <div
             class="absolute w-full h-full ml-[40px] bg-white rounded-l-full z-0 <?= strpos($url, '/PharmaDI-Admin/product') ? '' : 'hidden' ?>">
             <div class="absolute w-[20px] h-[20px] -top-[20px] right-[20px] bg-white">
-                <div class="absolute bg-[#0071AF] rounded-full bottom-0 right-0 w-[40px] h-[40px]"></div>
+                <div class="absolute bg-[#0091D0] rounded-full bottom-0 right-0 w-[40px] h-[40px]"></div>
             </div>
             <div class="absolute w-[20px] h-[20px] -bottom-[20px] right-[20px] bg-white">
-                <div class="absolute bg-[#0071AF] rounded-full top-0 right-0 w-[40px] h-[40px]"></div>
+                <div class="absolute bg-[#0091D0] rounded-full top-0 right-0 w-[40px] h-[40px]"></div>
             </div>
         </div>
     </div>
@@ -34,10 +34,10 @@ $url .= $_SERVER['REQUEST_URI'];
         <div
             class="absolute w-full h-full ml-[40px] bg-white rounded-l-full z-0 <?= strpos($url, '/PharmaDI-Admin/customer') ? '' : 'hidden' ?>">
             <div class="absolute w-[20px] h-[20px] -top-[20px] right-[20px] bg-white">
-                <div class="absolute bg-[#0071AF] rounded-full bottom-0 right-0 w-[40px] h-[40px]"></div>
+                <div class="absolute bg-[#0091D0] rounded-full bottom-0 right-0 w-[40px] h-[40px]"></div>
             </div>
             <div class="absolute w-[20px] h-[20px] -bottom-[20px] right-[20px] bg-white">
-                <div class="absolute bg-[#0071AF] rounded-full top-0 right-0 w-[40px] h-[40px]"></div>
+                <div class="absolute bg-[#0091D0] rounded-full top-0 right-0 w-[40px] h-[40px]"></div>
             </div>
         </div>
     </div>
@@ -49,10 +49,10 @@ $url .= $_SERVER['REQUEST_URI'];
         <div
             class="absolute w-full h-full ml-[40px] bg-white rounded-l-full z-0 <?= strpos($url, '/PharmaDI-Admin/order') ? '' : 'hidden' ?>">
             <div class="absolute w-[20px] h-[20px] -top-[20px] right-[20px] bg-white">
-                <div class="absolute bg-[#0071AF] rounded-full bottom-0 right-0 w-[40px] h-[40px]"></div>
+                <div class="absolute bg-[#0091D0] rounded-full bottom-0 right-0 w-[40px] h-[40px]"></div>
             </div>
             <div class="absolute w-[20px] h-[20px] -bottom-[20px] right-[20px] bg-white">
-                <div class="absolute bg-[#0071AF] rounded-full top-0 right-0 w-[40px] h-[40px]"></div>
+                <div class="absolute bg-[#0091D0] rounded-full top-0 right-0 w-[40px] h-[40px]"></div>
             </div>
         </div>
     </div>
@@ -64,10 +64,10 @@ $url .= $_SERVER['REQUEST_URI'];
         <div
             class="absolute w-full h-full ml-[40px] bg-white rounded-l-full z-0 <?= strpos($url, '/PharmaDI-Admin/brand') ? '' : 'hidden' ?>">
             <div class="absolute w-[20px] h-[20px] -top-[20px] right-[20px] bg-white">
-                <div class="absolute bg-[#0071AF] rounded-full bottom-0 right-0 w-[40px] h-[40px]"></div>
+                <div class="absolute bg-[#0091D0] rounded-full bottom-0 right-0 w-[40px] h-[40px]"></div>
             </div>
             <div class="absolute w-[20px] h-[20px] -bottom-[20px] right-[20px] bg-white">
-                <div class="absolute bg-[#0071AF] rounded-full top-0 right-0 w-[40px] h-[40px]"></div>
+                <div class="absolute bg-[#0091D0] rounded-full top-0 right-0 w-[40px] h-[40px]"></div>
             </div>
         </div>
     </div>
@@ -79,10 +79,10 @@ $url .= $_SERVER['REQUEST_URI'];
         <div
             class="absolute w-full h-full ml-[40px] bg-white rounded-l-full z-0 <?= strpos($url, '/PharmaDI-Admin/account') ? '' : 'hidden' ?>">
             <div class="absolute w-[20px] h-[20px] -top-[20px] right-[20px] bg-white">
-                <div class="absolute bg-[#0071AF] rounded-full bottom-0 right-0 w-[40px] h-[40px]"></div>
+                <div class="absolute bg-[#0091D0] rounded-full bottom-0 right-0 w-[40px] h-[40px]"></div>
             </div>
             <div class="absolute w-[20px] h-[20px] -bottom-[20px] right-[20px] bg-white">
-                <div class="absolute bg-[#0071AF] rounded-full top-0 right-0 w-[40px] h-[40px]"></div>
+                <div class="absolute bg-[#0091D0] rounded-full top-0 right-0 w-[40px] h-[40px]"></div>
             </div>
         </div>
     </div>
@@ -94,10 +94,10 @@ $url .= $_SERVER['REQUEST_URI'];
         <div
             class="absolute w-full h-full ml-[40px] bg-white rounded-l-full z-0 <?= strpos($url, '/PharmaDI-Admin/news') ? '' : 'hidden' ?>">
             <div class="absolute w-[20px] h-[20px] -top-[20px] right-[20px] bg-white">
-                <div class="absolute bg-[#0071AF] rounded-full bottom-0 right-0 w-[40px] h-[40px]"></div>
+                <div class="absolute bg-[#0091D0] rounded-full bottom-0 right-0 w-[40px] h-[40px]"></div>
             </div>
             <div class="absolute w-[20px] h-[20px] -bottom-[20px] right-[20px] bg-white">
-                <div class="absolute bg-[#0071AF] rounded-full top-0 right-0 w-[40px] h-[40px]"></div>
+                <div class="absolute bg-[#0091D0] rounded-full top-0 right-0 w-[40px] h-[40px]"></div>
             </div>
         </div>
     </div>

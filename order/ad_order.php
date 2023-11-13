@@ -19,7 +19,7 @@ $products = $getinf->all_ad();
 
 <body>
     <div class="flex justify-between">
-        <div class="menu bg-[#0071AF] w-[13%] max-h min-h-vh">
+        <div class="menu bg-[#0091D0] w-[13%] max-h min-h-vh">
             <?php require_once '../menu.php'; ?>
         </div>
         <div class="content 87%">
@@ -29,17 +29,17 @@ $products = $getinf->all_ad();
                     xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd"
                         d="M25.9375 9.25C25.9375 9.76777 25.5178 10.1875 25 10.1875L5 10.1875C4.48223 10.1875 4.0625 9.76777 4.0625 9.25C4.0625 8.73223 4.48223 8.3125 5 8.3125L25 8.3125C25.5178 8.3125 25.9375 8.73223 25.9375 9.25Z"
-                        fill="#0071AF" />
+                        fill="#0091D0" />
                     <path fill-rule="evenodd" clip-rule="evenodd"
                         d="M25.9375 15.5C25.9375 16.0178 25.5178 16.4375 25 16.4375L5 16.4375C4.48223 16.4375 4.0625 16.0178 4.0625 15.5C4.0625 14.9822 4.48223 14.5625 5 14.5625L25 14.5625C25.5178 14.5625 25.9375 14.9822 25.9375 15.5Z"
-                        fill="#0071AF" />
+                        fill="#0091D0" />
                     <path fill-rule="evenodd" clip-rule="evenodd"
                         d="M25.9375 21.75C25.9375 22.2678 25.5178 22.6875 25 22.6875L5 22.6875C4.48223 22.6875 4.0625 22.2678 4.0625 21.75C4.0625 21.2322 4.48223 20.8125 5 20.8125L25 20.8125C25.5178 20.8125 25.9375 21.2322 25.9375 21.75Z"
-                        fill="#0071AF" />
+                        fill="#0091D0" />
                 </svg>
                 <div class="flex justify-between items-center p-[5px] mx-[40px] ">
                     <span
-                        style="padding: 0 5px; font-size: 14px; cursor-pointer; color: #0071AF; border: 1px solid #0071AF; border-radius: 8px; padding: 5px 12px"
+                        style="padding: 0 5px; font-size: 14px; cursor-pointer; color: #0091D0; border: 1px solid #0091D0; border-radius: 8px; padding: 5px 12px"
                         onclick="window.location.href='http://localhost/PharmaDI-Enduser/log-out.php'">Đăng xuất</span>
                 </div>
             </div>

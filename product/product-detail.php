@@ -2,7 +2,7 @@
 <html lang="en">
 <?php
 require_once "product-pdo.php";
-$product = new Product(); 
+$product = new Product();
 $prod = $product->prodDetail($_GET['prodId']);
 $prodImg = $product->prodDetailImg($_GET['prodId']);
 $brand = new Brand();
@@ -29,29 +29,35 @@ $cates = $cate->getData();
             height: 100vh;
             min-height: 100vh;
         }
+        .box{
+        border-radius: 20px;
+        background: #FFF;
+        box-shadow: 0px 4px 40px 0px rgba(0, 0, 0, 0.10);
+    }
     </style>
 </head>
 
 <body>
-    <div class="flex justify-between">
-        <div class="menu bg-[#0071AF] w-[13%] max-h min-h-vh">
+    <div class="flex justify-between w-full">
+        <div class="max-h min-h-vh">
             <?php require_once '../menu.php'; ?>
         </div>
-        <form class="w-[87%]" method="POST" action="action-create.php">
-            <!-- Menu -->
+        <div class="flex p-8 w-full">
+        <form class="bg-white box w-full" method="POST" action="action-create.php">
+            <!-- Menu
             <div
                 class="flex justify-between items-center w-full border-solid border-[#d8d8d8] border pb-2.5 pt-2 shadow-md">
                 <svg class="mx-[40px]" width="30" height="31" viewBox="0 0 30 31" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd"
                         d="M25.9375 9.25C25.9375 9.76777 25.5178 10.1875 25 10.1875L5 10.1875C4.48223 10.1875 4.0625 9.76777 4.0625 9.25C4.0625 8.73223 4.48223 8.3125 5 8.3125L25 8.3125C25.5178 8.3125 25.9375 8.73223 25.9375 9.25Z"
-                        fill="#0071AF" />
+                        fill="#0091D0" />
                     <path fill-rule="evenodd" clip-rule="evenodd"
                         d="M25.9375 15.5C25.9375 16.0178 25.5178 16.4375 25 16.4375L5 16.4375C4.48223 16.4375 4.0625 16.0178 4.0625 15.5C4.0625 14.9822 4.48223 14.5625 5 14.5625L25 14.5625C25.5178 14.5625 25.9375 14.9822 25.9375 15.5Z"
-                        fill="#0071AF" />
+                        fill="#0091D0" />
                     <path fill-rule="evenodd" clip-rule="evenodd"
                         d="M25.9375 21.75C25.9375 22.2678 25.5178 22.6875 25 22.6875L5 22.6875C4.48223 22.6875 4.0625 22.2678 4.0625 21.75C4.0625 21.2322 4.48223 20.8125 5 20.8125L25 20.8125C25.5178 20.8125 25.9375 21.2322 25.9375 21.75Z"
-                        fill="#0071AF" />
+                        fill="#0091D0" />
                 </svg>
                 <div class="flex justify-between items-center p-[5px] mx-[40px] ">
                     <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -69,9 +75,9 @@ $cates = $cate->getData();
                             fill="#505050" />
                     </svg>
                 </div>
-            </div>
+            </div> -->
             <!-- Content -->
-            <div class="flex flex-col px-[40px] py-[20px] text-[#505050]">
+            <div class="flex flex-col px-[40px] py-[20px] text-[#505050] w-full">
                 <!-- Breadscumb -->
                 <div class="flex items-center text-[14px]">
                     <span class="px-1 cursor-pointer"
@@ -80,25 +86,29 @@ $cates = $cate->getData();
                     <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd"
                             d="M1.09327 0.692102C1.35535 0.467463 1.74991 0.497814 1.97455 0.759893L6.97455 6.59323C7.17517 6.82728 7.17517 7.17266 6.97455 7.40672L1.97455 13.24C1.74991 13.5021 1.35535 13.5325 1.09327 13.3078C0.831188 13.0832 0.800837 12.6886 1.02548 12.4266L5.67684 6.99997L1.02548 1.57338C0.800837 1.3113 0.831188 0.916741 1.09327 0.692102Z"
-                            fill="#0071AF" />
+                            fill="#0091D0" />
                     </svg>
-                    <span class="text-[#0071AF] px-1 font-[600]">Chi tiết sản phẩm</span>
+                    <span class="text-[#0091D0] px-1 font-[600]">Chi tiết sản phẩm</span>
                 </div>
                 <!-- Title -->
                 <div class="flex justify-between items-center py-[25px]">
-                    <span class="text-[#0071AF] font-[600]">CHI TIẾT SẢN PHẨM</span>
-                    <button type="button" onclick="window.location.href='http://localhost/PharmaDI-Admin/product/product-edit.php?prodId=<?= $prod['SKU'] ?>'"
-                        class="border-[#15A5E3] border border-solid px-[12px] py-[5px] text-[13px] rounded-[8px] text-[#0071AF]">Chỉnh sửa</button>
+                    <span class="text-[#0091D0] font-[600]">CHI TIẾT SẢN PHẨM</span>
+                    <button type="button"
+                        onclick="window.location.href='http://localhost/PharmaDI-Admin/product/product-edit.php?prodId=<?= $prod['SKU'] ?>'"
+                        class="border-[#15A5E3] border border-solid px-[12px] py-[5px] text-[13px] rounded-[8px] text-[#0091D0]">Chỉnh
+                        sửa</button>
                 </div>
                 <!-- Textbox -->
-                <div class="flex justify-between mt-1">
+                <div class="flex justify-between mt-1 ">
                     <div class="relative">
                         <span class="text-[13px] absolute px-[5px] bg-white -top-[10px] left-[15px]">Mã sản phẩm</span>
-                        <input readonly type="text" value="<?= $prod['SKU']?>" name="prodId" class="px-2.5 pl-[20px] py-[8px] w-[280px] border border-solid border-[#d8d8d8] rounded-[6px] outline-0 text-[13px]">
+                        <input readonly type="text" value="<?= $prod['SKU'] ?>" name="prodId"
+                            class="px-2.5 pl-[20px] py-[8px] w-[280px] border border-solid border-[#d8d8d8] rounded-[6px] outline-0 text-[13px]">
                     </div>
                     <div class="relative">
                         <span class="text-[13px] absolute px-[5px] bg-white -top-[10px] left-[15px]">Trạng thái</span>
-                        <input type="text" name="prodStatus" value="<?= $prod['prodStatus'] == 0 ? "Chờ duyệt" : ($prod['prodStatus'] == 1 ? "Đã duyệt" :"Không duyệt") ?>"
+                        <input type="text" name="prodStatus"
+                            value="<?= $prod['prodStatus'] == 0 ? "Chờ duyệt" : ($prod['prodStatus'] == 1 ? "Đã duyệt" : "Không duyệt") ?>"
                             class="px-2.5 pl-[20px] py-[8px] w-[280px] border border-solid border-[#d8d8d8] rounded-[6px] outline-0 text-[13px]"
                             value="Chờ duyệt" readonly>
                         </svg>
@@ -106,49 +116,50 @@ $cates = $cate->getData();
                     <div class="relative">
                         <span class="text-[13px] absolute px-[5px] bg-white -top-[10px] left-[15px]">Danh mục</span>
                         <input type="text" value="<?php
-                            foreach($cates as $cate)
-                                if($prod['cateId'] == $cate['cateId']) echo $cate['cateName'];
-                            ?>"
+                        foreach ($cates as $cate)
+                            if ($prod['cateId'] == $cate['cateId'])
+                                echo $cate['cateName'];
+                        ?>"
                             class="px-2.5 pl-[20px] py-[8px] w-[280px] border border-solid border-[#d8d8d8] rounded-[6px]  outline-0 text-[13px]"
                             readonly>
                     </div>
                     <div class="relative">
                         <span class="text-[13px] absolute px-[5px] bg-white -top-[10px] left-[15px]">Tag</span>
-                        <input type="text" readonly value="<?php
-                            foreach($tags as $tag)
-                                if($prod['tagId'] == $tag['tagId']) echo $tag['tagName'];
-                            ?>"
+                        <input type="text" readonly value="<?php foreach ($tags as $tag)
+                            if ($prod['tagId'] == $tag['tagId'])
+                                echo $tag['tagName'];
+                        ?>"
                             class="px-2.5 pl-[20px] py-[8px] w-[280px] border border-solid border-[#d8d8d8] rounded-[6px]  outline-0 text-[13px]">
                     </div>
                 </div>
                 <div class="relative flex justify-between mt-5 w-full">
                     <span class="text-[13px] absolute px-[5px] bg-white -top-[10px] left-[15px]">Tên sản phẩm</span>
-                    <input type="text" name = "prodName" value="<?= $prod['prodName']?>" readonly
+                    <input type="text" name="prodName" value="<?= $prod['prodName'] ?>" readonly
                         class="px-2.5 pl-[20px] py-[8px] w-[100%] border border-solid border-[#d8d8d8] rounded-[6px]  outline-0 text-[13px]">
                 </div>
                 <div class="flex justify-between mt-5">
                     <div class="relative" onclick="showDroplist('brand-droplist')" id="product-brand">
-                        <span
-                            class="text-[13px] absolute px-[5px] bg-white -top-[10px] left-[15px]">Thương
+                        <span class="text-[13px] absolute px-[5px] mr-3 bg-white -top-[10px] left-[15px]">Thương
                             hiệu</span>
-                        <input type="text" readonly value="<?php
-                            foreach($brands as $brand)
-                                if($prod['brandId'] == $brand['brandId']) echo $brand['brandName'];
-                            ?>"
-                            class="px-2.5 pl-[20px] py-[8px] w-[280px] border border-solid border-[#d8d8d8] rounded-[6px]  outline-0 text-[13px]">
+                        <input type="text" readonly value="<?php foreach ($brands as $brand)
+                            if ($prod['brandId'] == $brand['brandId'])
+                                echo $brand['brandName'];
+                        ?>"
+                            class="px-2.5 pl-[20px] py-[8px] mr-3 w-[280px] border border-solid border-[#d8d8d8] rounded-[6px]  outline-0 text-[13px]">
                     </div>
                     <div class="relative">
                         <span class="text-[13px] absolute px-[5px] bg-white -top-[10px] left-[15px]">Quốc gia</span>
-                        <input type="text" readonly name="prodCountry" value="<?= $prod['prodCountry']?>"
-                            class="px-2.5 pl-[20px] py-[8px] w-[280px] border border-solid border-[#d8d8d8] rounded-[6px]  outline-0 text-[13px]">
+                        <input type="text" readonly name="prodCountry" value="<?= $prod['prodCountry'] ?>"
+                            class="px-2.5 pl-[20px] py-[8px] w-[280px] mr-3 border border-solid border-[#d8d8d8] rounded-[6px]  outline-0 text-[13px]">
                     </div>
                     <div class="relative">
                         <span class="text-[13px] absolute px-[5px] bg-white -top-[10px] left-[15px]">Đơn vị</span>
-                        <input readonly value="<?= $prod['prodUnit']?>" type="text" name="prodUnit" class="px-2.5 pl-[20px] py-[8px] w-[280px] border border-solid border-[#d8d8d8] rounded-[6px]  outline-0 text-[13px]">
+                        <input readonly value="<?= $prod['prodUnit'] ?>" type="text" name="prodUnit"
+                            class="px-2.5 pl-[20px] py-[8px] w-[280px] mr-3 border border-solid border-[#d8d8d8] rounded-[6px]  outline-0 text-[13px]">
                     </div>
                     <div class="relative">
                         <span class="text-[13px] absolute px-[5px] bg-white -top-[10px] left-[15px]">Đã bán</span>
-                        <input type="text" value="<?= $prod['prodSellNumber']?>" name="prodSellNumber"
+                        <input type="text" value="<?= $prod['prodSellNumber'] ?>" name="prodSellNumber"
                             class="px-2.5 pl-[20px] py-[8px] w-[280px] border border-solid border-[#d8d8d8] rounded-[6px] outline-0 text-[13px]"
                             readonly>
                     </div>
@@ -156,43 +167,48 @@ $cates = $cate->getData();
                 <div class="flex items-center justify-between">
                     <div class="relative flex mt-5">
                         <span class="text-[13px] absolute px-[5px] bg-white -top-[10px] left-[15px]">Giá gốc</span>
-                        <input readonly value="<?= $prod['prodPrice']?>" type="text" name="prodPrice" class="px-2.5 pl-[20px] py-[8px] w-[605px] border border-solid border-[#d8d8d8] rounded-[6px]  outline-0 text-[13px]">                
+                        <input readonly value="<?= $prod['prodPrice'] ?>" type="text" name="prodPrice"
+                            class="px-2.5 pl-[20px] py-[8px] w-[500px] mr-3 border border-solid border-[#d8d8d8] rounded-[6px]  outline-0 text-[13px]">
                     </div>
                     <div class="relative flex mt-5">
-                        <span class="text-[13px] absolute px-[5px] bg-white -top-[10px] left-[15px]">Giá khuyến mãi</span>
-                        <input readonly value="<?= $prod['prodPriceSale']?>" type="text" name="prodPriceSale" class="px-2.5 pl-[20px] py-[8px] w-[605px] border border-solid border-[#d8d8d8] rounded-[6px]  outline-0 text-[13px]">                
+                        <span class="text-[13px] absolute px-[5px] bg-white -top-[10px] left-[15px]">Giá khuyến
+                            mãi</span>
+                        <input readonly value="<?= $prod['prodPriceSale'] ?>" type="text" name="prodPriceSale"
+                            class="px-2.5 pl-[20px] py-[8px] w-[500px] mr-3 border border-solid border-[#d8d8d8] rounded-[6px]  outline-0 text-[13px]">
                     </div>
                 </div>
                 <div class="relative flex justify-between mt-5 w-full">
                     <span class="text-[13px] absolute px-[5px] bg-white -top-[10px] left-[15px]">Thành phần</span>
-                    <textarea readonly name="prodIngredient" value="<?= $prod['prodIngredient']?>"
-                        class="h-max min-h-[60px] px-2.5 pl-[20px] py-[8px] w-[100%] border border-solid border-[#d8d8d8] rounded-[6px]  outline-0 text-[13px] resize-none"><?= $prod['prodIngredient']?></textarea readonly>
+                    <textarea readonly name="prodIngredient" value="<?= $prod['prodIngredient'] ?>"
+                        class="h-max min-h-[60px] px-2.5 pl-[20px] py-[8px] w-[100%] border border-solid border-[#d8d8d8] rounded-[6px]  outline-0 text-[13px] resize-none"><?= $prod['prodIngredient'] ?></textarea readonly>
                 </div>
                 <div class="relative flex justify-between mt-5 w-full">
                     <span class="text-[13px] absolute px-[5px] bg-white -top-[10px] left-[15px]">Dạng bào chế</span>
-                    <textarea readonly name="prodDosageForms" value="<?= $prod['prodDosageForms']?>"
-                        class="h-max min-h-[60px] px-2.5 pl-[20px] py-[8px] w-[100%] border border-solid border-[#d8d8d8] rounded-[6px]  outline-0 text-[13px] resize-none"><?= $prod['prodDosageForms']?></textarea readonly>
+                    <textarea readonly name="prodDosageForms" value="<?= $prod['prodDosageForms'] ?>"
+                        class="h-max min-h-[60px] px-2.5 pl-[20px] py-[8px] w-[100%] border border-solid border-[#d8d8d8] rounded-[6px]  outline-0 text-[13px] resize-none"><?= $prod['prodDosageForms'] ?></textarea readonly>
                 </div>
                 <div class="relative flex justify-between mt-5 w-full">
                     <span class="text-[13px] absolute px-[5px] bg-white -top-[10px] left-[15px]">Liều dùng</span>
-                    <textarea readonly name="prodDosage" value="<?= $prod['prodDosage']?>"
-                        class="h-max min-h-[60px] px-2.5 pl-[20px] py-[8px] w-[100%] border border-solid border-[#d8d8d8] rounded-[6px]  outline-0 text-[13px] resize-none"><?= $prod['prodDosage']?></textarea readonly>
+                    <textarea readonly name="prodDosage" value="<?= $prod['prodDosage'] ?>"
+                        class="h-max min-h-[60px] px-2.5 pl-[20px] py-[8px] w-[100%] border border-solid border-[#d8d8d8] rounded-[6px]  outline-0 text-[13px] resize-none"><?= $prod['prodDosage'] ?></textarea readonly>
                 </div>
                 <div class="relative flex justify-between mt-5 w-full">
                     <span class="text-[13px] absolute px-[5px] bg-white -top-[10px] left-[15px]">Mô tả sản phẩm</span>
-                    <textarea readonly name="prodDescript" value="<?= $prod['prodDescrip']?>"
-                        class="h-max min-h-[100px] px-2.5 pl-[20px] py-[8px] w-[100%] border border-solid border-[#d8d8d8] rounded-[6px]  outline-0 text-[13px] resize-none"><?= $prod['prodDescrip']?></textarea>
+                    <textarea readonly name="prodDescript" value="<?= $prod['prodDescrip'] ?>"
+                        class="h-max min-h-[100px] px-2.5 pl-[20px] py-[8px] w-[100%] border border-solid border-[#d8d8d8] rounded-[6px]  outline-0 text-[13px] resize-none"><?= $prod['prodDescrip'] ?></textarea>
                 </div>
                 <!-- Upload picture -->
                 <div class="flex">
                     <div id='imgContainer' class="mr-5 h-[150px]  mt-5 flex justify-center items-center">
-                    <?php foreach ($prodImg as $img): ?>
-                            <img src="<?= $img['imgPath']; ?>" alt="" class="max-h-full mr-[20px] object-cover rounded-[8px] p-[8px] border border-dashed border-[#d8d8d8]">
+                        <?php foreach ($prodImg as $img): ?>
+                            <img src="<?= $img['imgPath']; ?>" alt=""
+                                class="max-h-full mr-[20px] object-cover rounded-[8px] p-[8px] border border-dashed border-[#d8d8d8]">
                         <?php endforeach; ?>
                     </div>
                 </div>
             </div>
         </form>
+                        </div>
     </div>
 </body>
 
@@ -212,11 +228,11 @@ $cates = $cate->getData();
 
     var file = document.getElementById('image');
 
-    function getImage(){
+    function getImage() {
         file.click();
     }
 
-    function getImageInfo(){
+    function getImageInfo() {
         document.getElementById('imgName').innerHTML = file.files[0].name;
         let fileReader = new FileReader();
         fileReader.readAsDataURL(file.files[0])

@@ -8,7 +8,7 @@ class News extends Connection
         $create->execute($data);
     }
     public function getData($title){
-        $sql = "SELECT * FROM news " . ($title != null ? "WHERE newsTitle LIKE '%{$title}%'" : ' ');
+        $sql = "SELECT * FROM news " . ($title != null ? "WHERE newsTitle LIKE '%{$title}%'" : ' ') . " ORDER BY newsLastUpdate DESC, newsCreatedDate DESC";
         $select = $this->prepareSQL($sql);
         $select->execute();
         return $select->fetchAll();
@@ -20,7 +20,7 @@ class News extends Connection
         return $select->fetchAll()[0];
     }
     public function newsUpdate($data){
-        $sql = "UPDATE news SET newsTitle=:newsTitle, newsImage=:newsData, newsImgTitle=:newsImgTitle, newsContent=:newsContent WHERE newsId = :newsId;";
+        $sql = "UPDATE news SET newsTitle=:newsTitle, newsImage=:newsImage, newsImgTitle=:newsImgTitle, newsContent=:newsContent WHERE newsId = :newsId;";
         $select = $this->prepareSQL($sql);
         $select->execute($data);
     }

@@ -15,6 +15,7 @@ if (count($products) <= ($page - 1) * $pageSize) {
 
 <head>
     <meta charset="UTF-8">
+    <title>Sản phẩm</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -78,25 +79,24 @@ if (count($products) <= ($page - 1) * $pageSize) {
                     xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd"
                         d="M25.9375 9.25C25.9375 9.76777 25.5178 10.1875 25 10.1875L5 10.1875C4.48223 10.1875 4.0625 9.76777 4.0625 9.25C4.0625 8.73223 4.48223 8.3125 5 8.3125L25 8.3125C25.5178 8.3125 25.9375 8.73223 25.9375 9.25Z"
-                        fill="#0071AF" />
+                        fill="#0091D0" />
                     <path fill-rule="evenodd" clip-rule="evenodd"
                         d="M25.9375 15.5C25.9375 16.0178 25.5178 16.4375 25 16.4375L5 16.4375C4.48223 16.4375 4.0625 16.0178 4.0625 15.5C4.0625 14.9822 4.48223 14.5625 5 14.5625L25 14.5625C25.5178 14.5625 25.9375 14.9822 25.9375 15.5Z"
-                        fill="#0071AF" />
+                        fill="#0091D0" />
                     <path fill-rule="evenodd" clip-rule="evenodd"
                         d="M25.9375 21.75C25.9375 22.2678 25.5178 22.6875 25 22.6875L5 22.6875C4.48223 22.6875 4.0625 22.2678 4.0625 21.75C4.0625 21.2322 4.48223 20.8125 5 20.8125L25 20.8125C25.5178 20.8125 25.9375 21.2322 25.9375 21.75Z"
-                        fill="#0071AF" />
+                        fill="#0091D0" />
                 </svg>
                 <div class="flex justify-between items-center p-[5px] mx-[40px] ">
-                    <span style="padding: 0 5px; font-size: 14px; cursor-pointer; color: #0071AF; border: 1px solid #0071AF; border-radius: 8px; padding: 5px 12px" onclick="window.location.href='http://localhost/PharmaDI-Enduser/log-out.php'">Đăng xuất</span>
+                    <span style="padding: 0 5px; font-size: 14px; cursor-pointer; color: #0091D0; border: 1px solid #0091D0; border-radius: 8px; padding: 5px 12px" onclick="window.location.href='http://localhost/PharmaDI-Enduser/log-out.php'">Đăng xuất</span>
                 </div>
             </div> -->
             <!--Search-->
-            <div class="flex mt-6 justify-between w-full">
+            <div class="flex mt-10 justify-between w-full">
                 <div class="w-full flex justify-between">
                     <div class="relative ml-10 w-[20%]">
                         <div class="relative" onclick="showDroplist('status-droplist')" id="status-search">
-                            <span
-                                class="text-[13px] cursor-pointer absolute px-[5px] bg-white -top-[10px] left-[15px]">Trạng
+                            <span class="text-[13px] cursor-pointer absolute px-[5px] bg-white -top-[10px] left-[15px]">Trạng
                                 thái</span>
                             <input type="text"
                                 value="<?= isset($_GET['search-status']) ? $_GET['search-status'] : null ?>"
@@ -104,7 +104,7 @@ if (count($products) <= ($page - 1) * $pageSize) {
                             <input type="text" readonly
                                 value="<?= isset($_GET['search-status']) ? ($_GET['search-status'] == 1 ? "Đã duyệt" : ($_GET['search-status'] == 2 ? "Không duyệt" : ($_GET['search-status'] == 0 ? "Chờ duyệt" : "Tất cả"))) : 'Tất cả' ?>"
                                 class="cursor-pointer px-2.5 pl-[20px] py-[8px] w-[280px] border border-solid border-[#d8d8d8] rounded-[6px] focus-within:border focus-within:border-solid outline-0 text-[13px]">
-                            <svg class="absolute right-[0px] top-[11px]" width="15" height="15" viewBox="0 0 15 15"
+                            <svg class="absolute right-[-35px] top-[11px]" width="15" height="15" viewBox="0 0 15 15"
                                 fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" clip-rule="evenodd"
                                     d="M2.76911 5.31995C2.93759 5.12339 3.23351 5.10063 3.43007 5.26911L7.50001 8.75763L11.57 5.26911C11.7665 5.10063 12.0624 5.12339 12.2309 5.31995C12.3994 5.51651 12.3766 5.81243 12.1801 5.98091L7.80507 9.73091C7.62953 9.88138 7.37049 9.88138 7.19495 9.73091L2.81995 5.98091C2.62339 5.81243 2.60063 5.51651 2.76911 5.31995Z"
@@ -123,23 +123,23 @@ if (count($products) <= ($page - 1) * $pageSize) {
                             </div>
                         </div>
                     </div>
-                    <div class="relative w-[60%]">
+                    <div class="relative ml-5 w-[55%]">
                         <span class="text-[13px] absolute left-[15px] -top-[10px] bg-white px-1.5">Tên sản phẩm</span>
                         <input type="text" name="search-prodName"
                             value="<?= isset($_GET['search-prodName']) ? $_GET['search-prodName'] : null ?>"
-                            class="border-solid px-4 py-1.5 border-[#d8d8d8] border rounded-[6px] w-full focus-within:border-[#0071AF] focus-within:border focus-within:border-solid outline-0 text-[13px]">
+                            class="border-solid px-4 py-1.5 border-[#d8d8d8] border rounded-[6px] w-full focus-within:border-[#0091D0] focus-within:border focus-within:border-solid outline-0 text-[13px]">
                     </div>
                     <button type="submit"
-                        class="rounded-[6px] bg-[#0071AF] px-[16px] py-[7px] text-[13px] text-white mr-10">Tìm
+                        class="rounded-[6px] bg-[#0091D0] px-[16px] py-[7px] text-[13px] text-white mr-10">Tìm
                         kiếm</button>
                 </div>
             </div>
             <div class="flex flex-col px-[50px] py-[25px]">
                 <div class="flex justify-between items-center">
-                    <span class="text-[#0071AF] font-[600]">DANH SÁCH SẢN PHẨM</span>
+                    <span class="text-[#0091D0] font-[600]">DANH SÁCH SẢN PHẨM</span>
                     <button type="button"
                         onclick="window.location.href='http://localhost/PharmaDI-Admin/product/product-new.php'"
-                        class="border-[#15A5E3] border border-solid px-[12px] py-[5px] text-[13px] rounded-[8px] text-[#0071AF]">Thêm
+                        class="border-[#15A5E3] border border-solid px-[12px] py-[5px] text-[13px] rounded-[8px] text-[#0091D0]">Thêm
                         mới</button>
                 </div>
                 <div class="mt-[20px] text-[#505050]">
@@ -156,7 +156,7 @@ if (count($products) <= ($page - 1) * $pageSize) {
                     <?php
                     $i = ($page - 1) * $pageSize;
                     foreach (array_slice($products, ($page - 1) * $pageSize, $pageSize) as $prod): ?>
-                        <div class="grid grid-cols-11 py-[15px] border-b cursor-pointer"
+                        <div class="grid grid-cols-11 py-3 border-b cursor-pointer"
                             onclick="window.location.href = 'http://localhost/PharmaDI-Admin/product/product-detail.php?prodId=<?= $prod['SKU'] ?>'">
                             <span class="text-[13px] truncate ">
                                 <?= $i = $i + 1 ?>
@@ -184,7 +184,7 @@ if (count($products) <= ($page - 1) * $pageSize) {
                             </span>
                         </div>
                     <?php endforeach; ?>
-                    <div class="flex items-center justify-end mt-[20px]">
+                    <div class="flex items-center justify-end mt-6">
                         <div class="flex">
                             <select class="border border-[#d8d8d8] text-[13px] px-1 rounded-[2px] outline-0 mr-[10px]"
                                 onchange="this.form.submit()" name='pageSize'>

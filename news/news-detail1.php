@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html lang="en">
 <?php 
 require "news-pdo.php";
 $news = new News();
@@ -9,56 +11,26 @@ $newsArray = $news->newsDetail($_GET['newsId']);
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter&family=Roboto&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="../assets/images/logo-shortcut.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../asset/image/logo-shortcut.png" type="image/x-icon">
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Bài đăng</title>
+    <title>Chi tiết tin tức</title>
+    <style>
+        body {
+            font-family: "Inter";
+            height: 100vh;
+            min-height: 100vh;
+        }
+    </style>
 </head>
-<style>
-    body {
-        font-family: "Inter";
-        height: 100vh;
-        min-height: 100vh;
-    }
-
-    .news-list {
-        display: flex;
-        justify-content: space-between;
-    }
-
-    input::-webkit-outer-spin-button,
-    input::-webkit-inner-spin-button {
-        -webkit-appearance: none;
-        margin: 0;
-    }
-
-    .slide {
-        animation: slide 0.5s;
-    }
-
-    #container-slide {
-        position: absolute;
-        left: var(--transitionto)
-    }
-
-    @keyframes slide {
-        from {
-            left: var(--last)
-        }
-
-        to {
-            left: var(--transitionto)
-        }
-    }
-</style>
 
 <body>
-    <form method="GET" id='form-news-search' class="flex justify-between">
-        <div class="max-h min-h-vh">
+    <form class="flex justify-between">
+    <div class="menu bg-[#0091D0] w-[13%] max-h min-h-vh">
             <?php require_once '../menu.php'; ?>
         </div>
-        <div class="bg-white m-8 box w-full">
-            <!--Menu-->
-            <!-- <div
+        <div class="w-[87%]">
+            <!-- Menu -->
+            <div
                 class="flex justify-between items-center w-full border-solid border-[#d8d8d8] border pb-2.5 pt-2 shadow-md">
                 <svg class="mx-[40px]" width="30" height="31" viewBox="0 0 30 31" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
@@ -88,9 +60,9 @@ $newsArray = $news->newsDetail($_GET['newsId']);
                             fill="#505050" />
                     </svg>
                 </div>
-            </div> -->
-            <!--Search-->
-            <div class="flex justify-between w-full mt-5 px-[50px] py-[25px] flex-col text-[#505050]">
+            </div>
+            <!-- Content -->
+            <div class="flex flex-col px-[40px] py-[20px] text-[#505050]">
                 <!-- Breadscumb -->
                 <div class="flex items-center text-[14px]">
                     <span class="px-1 cursor-pointer" onclick="window.location.href='http://localhost/PharmaDI-Admin/news/news-list.php'">Danh sách tin tức</span>
@@ -107,46 +79,53 @@ $newsArray = $news->newsDetail($_GET['newsId']);
                     <button type="button" onclick="window.location.href='http://localhost/PharmaDI-Admin/news/news-edit.php?newsId=<?=$newsArray['newsId']?>'"
                         class="border-[#15A5E3] border border-solid px-[12px] py-[5px] text-[13px] rounded-[8px] text-[#0091D0]">Chỉnh sửa</button>
                 </div>
-                <div class="flex flex-col">
-                        <span class="text-[13px] px-[5px] bg-white font-[600] pl-5 pb-1">Tiêu đề</span>
+                <!-- Textbox -->
+                <div class="flex justify-between mt-1 items-center max-h-[40px]">
+                    <div class="relative">
+                        <span class="text-[13px] absolute px-[5px] bg-white -top-[10px] left-[15px]">Tiêu đề</span>
                         <input type="text" name="newsTitle" readonly value="<?= $newsArray['newsTitle']?>" readonly
-                            class="px-2.5 pl-[20px] py-[10px] w-full border border-solid border-[#d8d8d8] rounded-[6px] outline-0 text-[13px] h-[40px]">
-                    
+                            class="px-2.5 pl-[20px] py-[10px] w-[850px] border border-solid border-[#d8d8d8] rounded-[6px] outline-0 text-[13px] h-[40px]">
+                    </div>
+                    <div class="relative">
+                        
+                        <div 
+                            class="flex relative border border-solid rounded-[6px] border-[#d8d8d8] px-2.5 pl-[20px] py-[10px] w-[350px] h-[40px]"
+>
+                            <span class="text-[13px] absolute px-[5px] bg-white -top-[10px] left-[15px]">Ảnh</span>
+                            <span id="imgName" class="absolute text-[12px] top-2.5 truncate max-w-[300px]"><?= $newsArray['newsImgTitle'] ?></span>
+            
+    </div>
+                    </div>
                 </div>
-                <div class="flex flex-col mt-3">
-                        <span class="text-[13px] px-[5px] bg-white font-[600] pl-5 pb-1">Ảnh đính kèm</span>
-                        <input type="text" name="newsTitle" readonly value="<?= $newsArray['newsImgTitle']?>" readonly
-                            class="px-2.5 pl-[20px] py-[10px] w-full border border-solid border-[#d8d8d8] rounded-[6px] outline-0 text-[13px] h-[40px]">
-                    
+                <!-- Content inside -->
+                <div class="relative flex justify-between mt-5 w-full">
+                    <span class="text-[13px] absolute px-[5px] bg-white -top-[10px] left-[15px]">Nội dung</span>
+                    <textarea name="newsContent"  readonly
+                        class="min-h-[500px] px-2.5 pl-[20px] py-[10px] w-[100%] border border-solid border-[#d8d8d8] rounded-[6px] outline-0 text-[13px] resize-none"><?=$newsArray['newsContent']?></textarea>
                 </div>
-                <div class="flex flex-col mt-3">
-                        <span class="text-[13px] px-[5px] bg-white font-[600] pl-5 pb-1">Nội dung</span>
-                        <textarea name="newsContent"  readonly
-                        class="min-h-[300px] px-2.5 pl-[20px] py-[10px] w-[100%] border border-solid border-[#d8d8d8] rounded-[6px] outline-0 text-[13px] resize-none"><?=$newsArray['newsContent']?></textarea>
-                    
-                </div>
-            </div>
-            <div class="flex flex-col px-[50px] py-[25px]">
             </div>
         </div>
     </form>
 </body>
+
+</html>
 <script>
     function showDroplist(id) {
         var dropList = document.getElementById(id);
         dropList.classList.toggle('hidden');
+        console.log(dropList.getElementsByTagName('span'))
     }
-    function select(id, value, label) {
-        var dom = document.getElementById(id);
-        dom.getElementsByTagName('input')[0].value = value;
-        dom.getElementsByTagName('input')[1].value = label;
+    var file = document.getElementById('image');
+    function getImage() {
+        file.click();
     }
-    function changePageSize(value) {
-        console.log(value)
-    }
-    function submitForm(id) {
-        document.getElementById(id).submit()
+    function getImageInfo() {
+        document.getElementById('imgName').innerHTML = file.files[0].name;
+        let fileReader = new FileReader();
+        fileReader.readAsDataURL(file.files[0])
+        fileReader.onload = (e) => {
+            // var img = document.createElement('img');
+            document.getElementById('newsImg').value = e.target.result
+        }
     }
 </script>
-<?php
-?>

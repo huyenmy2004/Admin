@@ -1,9 +1,9 @@
 <?php
 require_once "../connect-db.php";
 class Customer extends Connection{
-    public function getData($name, $status){
-        $sql = "SELECT * FROM customer " . ($name != null ? "WHERE cusName LIKE '%{$name}%'" . ($status != null ? " AND cusStatus = '$status'" : ' ')
-            : ($status != null ? "WHERE cusStatus = $status" : ' '));
+    public function getData($name, $phone){
+        $sql = "SELECT * FROM customer " . ($name != null ? "WHERE cusName LIKE '%{$name}%'" . ($phone != null ? " AND cusPhone LIKE '%{$phone}%'" : ' ')
+            : ($phone != null ? " WHERE cusPhone LIKE '%{$phone}%'" : ' '));
         $select = $this->prepareSQL($sql);
         $select->execute();
         return $select->fetchAll();
@@ -18,7 +18,7 @@ class Customer extends Connection{
     public function cusUpdate($data){
         $sql = "UPDATE customer SET cusId=:cusId,cusName=:cusName,cusContact=:cusContact,
         cusPhone=:cusPhone,cusAddress=:cusAddress,cusGPP=:cusGPP,cusGPPDate=:cusGPPDate,
-        cusGPPAddr=:cusGPPAddr,cusStatus=:cusStatus WHERE cusId=:cusId";
+        cusGPPAddr=:cusGPPAddr WHERE cusId=:cusId";
         $update = $this->prepareSQL($sql);
         $update->execute($data);
     }  

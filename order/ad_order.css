@@ -6,7 +6,7 @@
     position: fixed;
     width: 200px;
     height: 100%;
-    background: #0071AF;
+    background: #0091D0;
     height: 860px;
     overflow: hidden;
     flex-direction: column;
@@ -159,7 +159,7 @@
 
 .status-box button {
     border-radius: 8px;
-    background: var(--d-9-d-9-d-9, #0071AF);
+    background: var(--d-9-d-9-d-9, #0091D0);
     border: none;
     color: white;
     width: 90px;
@@ -185,7 +185,7 @@
 }
 
 .order-box h1 {
-    color: var(--d-9-d-9-d-9, #0071AF);
+    color: var(--d-9-d-9-d-9, #0091D0);
     font-family: Roboto;
     font-size: 20px;
     font-style: normal;
