@@ -14,5 +14,25 @@ class Order extends Connection
         $select->execute();
         return $select->fetchAll();
     }
+    public function detail($order){
+        $sql = "SELECT *, SUM(prodNumber) AS num, SUM(prodNumber*prodOldPrice) AS total FROM product INNER JOIN product_order ON product.SKU = product_order.SKU 
+        INNER JOIN orders ON product_order.orderId = orders.orderId 
+        INNER JOIN customer ON orders.cusId = customer.cusId
+        INNER JOIN product_img ON product_img.SKU = product.SKU
+        INNER JOIN brand ON brand.brandId = product.brandId WHERE orders.orderId  = '$order'";
+        $select = $this->prepareSQL($sql);
+        $select->execute();
+        return $select->fetchAll();
+    }
+    public function brandInOrder($order){
+        $sql = "SELECT brand.brandName FROM product INNER JOIN product_order ON product.SKU = product_order.SKU 
+        INNER JOIN orders ON product_order.orderId = orders.orderId 
+        INNER JOIN customer ON orders.cusId = customer.cusId
+        INNER JOIN brand ON brand.brandId = product.brandId WHERE orders.orderId  = '$order' 
+        GROUP BY brand.brandId;";
+        $select = $this->prepareSQL($sql);
+        $select->execute();
+        return $select->fetchAll();
+    }
 }
 ?>

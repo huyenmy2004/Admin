@@ -102,7 +102,7 @@ $url .= $_SERVER['REQUEST_URI'];
                 <span class="pl-2 text-[14px] py-2">Bài đăng</span>
             </div>
         </div>
-        <div class="flex justify-center items-center bg-[#d8d8d8] mx-7 rounded-[10px] mb-4">
+        <div class="flex justify-center items-center bg-[#d8d8d8] mx-7 rounded-[10px] mb-4" onclick="window.location.href='../log-out.php'">
             <span class="pl-2 text-[#505050] text-[14px] p-2">Đăng xuất</span>
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd"
