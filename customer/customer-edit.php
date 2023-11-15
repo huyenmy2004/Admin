@@ -53,7 +53,7 @@ $cus = $customer->cusDetail($_GET['cusId']);
 </style>
 
 <body>
-    <form method="POST" id='form-news-search' action="action-edit.php" class="flex justify-between">
+    <form method="POST" action="action-edit.php?cusId=<?=$_GET['cusId']?>" class="flex justify-between">
         <div class="max-h min-h-vh">
             <?php require_once '../menu.php'; ?>
         </div>
@@ -84,16 +84,32 @@ $cus = $customer->cusDetail($_GET['cusId']);
                 </div>
                 <div class="flex items-center w-full">
                     <div class="flex flex-col w-full mr-5">
-                        <span class="text-[13px] px-[5px] bg-white font-[600] pl-5 pb-1">Mã khách hàng</span>
-                        <input type="text" name="cusId" readonly value="<?= $cus['cusId'] ?>" readonly
-                            class="px-2.5 pl-[20px] py-[10px] w-full border border-solid border-[#d8d8d8] rounded-[6px] outline-0 text-[13px] h-[40px]">
-
-                    </div>
-                    <div class="flex flex-col w-full">
                         <span class="text-[13px] px-[5px] bg-white font-[600] pl-5 pb-1">Tên khách hàng</span>
                         <input type="text" name="cusName" value="<?= $cus['cusName'] ?>"
                             class="px-2.5 pl-[20px] py-[10px] w-full border border-solid border-[#d8d8d8] rounded-[6px] outline-0 text-[13px] h-[40px]">
 
+                    </div>
+                    <div class="relative flex flex-col w-full" onclick="showDroplist('status-droplist')" id='status-customer'>
+                        <span class="text-[13px] px-[5px] bg-white font-[600] pl-5 pb-1">Trạng thái</span>
+                        <input type="text" value="<?=$cus['cusStatus']?>" class="hidden" name="cusStatus">
+                        <input type="text" readonly
+                            value="<?= $cus['cusStatus'] == 0 ? "Đã duyệt" : ($cus['cusStatus'] == 1 ? "Chờ duyệt" : "Không duyệt") ?>" readonly
+                            class="px-2.5 pl-[20px] py-[10px] w-full border border-solid border-[#d8d8d8] rounded-[6px] outline-0 text-[13px] h-[40px]">
+                        <svg class="absolute right-[10px] top-[37px]" width="15" height="15" viewBox="0 0 15 15"
+                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M2.76911 5.31995C2.93759 5.12339 3.23351 5.10063 3.43007 5.26911L7.50001 8.75763L11.57 5.26911C11.7665 5.10063 12.0624 5.12339 12.2309 5.31995C12.3994 5.51651 12.3766 5.81243 12.1801 5.98091L7.80507 9.73091C7.62953 9.88138 7.37049 9.88138 7.19495 9.73091L2.81995 5.98091C2.62339 5.81243 2.60063 5.51651 2.76911 5.31995Z"
+                                fill="#1C274C" />
+                        </svg>
+                        <div class="top-[65px] absolute flex flex-col bg-white py-2 rounded-[6px] border border-[#d8d8d8] text-[13px] hidden w-full z-10"
+                            id="status-droplist">
+                            <span class="hover:bg-gray-100 px-[20px] py-[3px] text-[#505050]"
+                                onclick="select('status-customer', 0, 'Đã duyệt')">Đã duyệt</span>
+                            <span class="hover:bg-gray-100 px-[20px] py-[3px] text-[#505050]"
+                                onclick="select('status-customer', 1, 'Chờ duyệt')">Chờ duyệt</span>
+                            <span class="hover:bg-gray-100 px-[20px] py-[3px] text-[#505050]"
+                                onclick="select('status-customer', 3, 'Không duyệt')">Không duyệt</span>
+                        </div>
                     </div>
                 </div>
                 <div class="flex items-center w-full mt-3">
@@ -131,7 +147,7 @@ $cus = $customer->cusDetail($_GET['cusId']);
                         class="px-2.5 pl-[20px] py-[10px] w-full border border-solid border-[#d8d8d8] rounded-[6px] outline-0 text-[13px] h-[40px]">
                 </div>
                 <div class="justify-end flex mt-5">
-                    <button onclick="window.location.href='http://localhost/PharmaDI-Admin/customer/action-edit.php'"
+                    <button onclick="window.location.href='http://localhost/PharmaDI-Admin/customer/customer-list.php'"
                         class="text-[12px] border border-solid border-[#d8d8d8] rounded-[6px] px-[14px] py-[7px] mr-3">Huỷ
                         bỏ</button>
                     <button class="text-[12px] bg-[#15A5E3] text-white rounded-[6px] px-[14px] py-[7px]"

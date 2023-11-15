@@ -16,9 +16,9 @@ class Customer extends Connection{
     }
 
     public function cusUpdate($data){
-        $sql = "UPDATE customer SET cusId=:cusId,cusName=:cusName,cusContact=:cusContact,
+        $sql = "UPDATE customer SET cusName=:cusName,cusContact=:cusContact,
         cusPhone=:cusPhone,cusAddress=:cusAddress,cusGPP=:cusGPP,cusGPPDate=:cusGPPDate,
-        cusGPPAddr=:cusGPPAddr WHERE cusId=:cusId";
+        cusGPPAddr=:cusGPPAddr, cusStatus=:cusStatus WHERE cusId=:cusId";
         $update = $this->prepareSQL($sql);
         $update->execute($data);
     }  

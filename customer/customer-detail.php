@@ -82,14 +82,14 @@ $cus = $customer->cusDetail($_GET['cusId']);
                 </div>
                 <div class="flex items-center w-full">
                     <div class="flex flex-col w-full mr-5">
-                        <span class="text-[13px] px-[5px] bg-white font-[600] pl-5 pb-1">Mã khách hàng</span>
-                        <input type="text" name="newsTitle" readonly value="<?= $cus['cusId'] ?>" readonly
-                            class="px-2.5 bg-[#f2f2f2] pl-[20px] py-[10px] w-full border border-solid border-[#d8d8d8] rounded-[6px] outline-0 text-[13px] h-[40px]">
-
-                    </div>
-                    <div class="flex flex-col w-full">
                         <span class="text-[13px] px-[5px] bg-white font-[600] pl-5 pb-1">Tên khách hàng</span>
                         <input type="text" name="newsTitle" readonly value="<?= $cus['cusName'] ?>" readonly
+                        class="px-2.5 bg-[#f2f2f2] pl-[20px] py-[10px] w-full border border-solid border-[#d8d8d8] rounded-[6px] outline-0 text-[13px] h-[40px]">
+                        
+                    </div>
+                    <div class="flex flex-col w-full ">
+                        <span class="text-[13px] px-[5px] bg-white font-[600] pl-5 pb-1">Trạng thái</span>
+                        <input type="text" name="newsTitle" readonly value="<?= $cus['cusStatus'] == 0 ? "Đã duyệt" : ($cus['cusStatus'] == 0 ? "Chờ duyệt" : "Không duyệt") ?>" readonly
                             class="px-2.5 bg-[#f2f2f2] pl-[20px] py-[10px] w-full border border-solid border-[#d8d8d8] rounded-[6px] outline-0 text-[13px] h-[40px]">
 
                     </div>

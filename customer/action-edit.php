@@ -2,7 +2,7 @@
     require_once 'customer-pdo.php';
     $customer = new Customer();
     $data = [
-        'cusId' => $_POST['cusId'],
+        'cusId' => $_GET['cusId'],
         'cusName' => $_POST['cusName'],
         'cusContact' => $_POST['cusContact'], 
         'cusPhone' => $_POST['cusPhone'],
@@ -10,6 +10,7 @@
         'cusGPP'=> $_POST['cusGPP'],
         'cusGPPDate' => $_POST['cusGPPDate'],
         'cusGPPAddr' => $_POST['cusGPPAddr'],
+        'cusStatus' => $_POST['cusStatus'],
     ];
     $customer->cusUpdate($data);
     header("Location: http://localhost/PharmaDI-Admin/customer/customer-list.php");

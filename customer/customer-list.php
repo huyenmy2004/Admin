@@ -94,8 +94,8 @@ if (count($customers) <= ($page - 1) * $pageSize) {
                 <div class="mt-[20px] text-[#505050]">
                     <div class="grid grid-cols-11 border-b pb-2">
                         <span class="text-[13px] font-[600]">STT</span>
-                        <span class="text-[13px] font-[600]">ID</span>
                         <span class="text-[13px] col-span-2 font-[600]">Tên khách hàng</span>
+                        <span class="text-[13px] font-[600]">Trạng thái</span>
                         <span class="text-[13px] col-span-2 font-[600]">Tên liên hệ</span>
                         <span class="text-[13px] font-[600]">Số điện thoại</span>
                         <span class="text-[13px] col-span-3 font-[600]">Địa chỉ</span>
@@ -109,11 +109,11 @@ if (count($customers) <= ($page - 1) * $pageSize) {
                             <span class="text-[13px] truncate ">
                                 <?= $i = $i + 1 ?>
                             </span>
-                            <span class="text-[13px] truncate">
-                                <?= $cus['cusId'] ?>
-                            </span>
                             <span class="text-[13px] col-span-2 truncate">
                                 <?= $cus['cusName'] ?>
+                            </span>
+                            <span class="text-[13px] truncate">
+                                <?= $cus['cusStatus'] == 0 ? "Đã duyệt" : ($cus['cusStatus'] == 0 ? "Chờ duyệt" : "Không duyệt") ?>
                             </span>
                             <span class="text-[13px] col-span-2 truncate">
                                 <?= $cus['cusContact'] ?>
