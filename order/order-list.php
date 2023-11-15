@@ -144,10 +144,10 @@ if (count($orders) <= ($page - 1) * $pageSize) {
             <div class="flex flex-col px-[50px] py-[25px]">
                 <div class="flex justify-between items-center">
                     <span class="text-[#0091D0] font-[600]">DANH SÁCH ĐƠN HÀNG</span>
-                    <button type="button"
+                    <!-- <button type="button"
                         onclick="window.location.href='http://localhost/PharmaDI-Admin/order/order-new.php'"
                         class="border-[#15A5E3] border border-solid px-[12px] py-[5px] text-[13px] rounded-[8px] text-[#0091D0]">Thêm
-                        mới</button>
+                        mới</button> -->
                 </div>
                 <div class="mt-[20px] text-[#505050]">
                     <div class="grid grid-cols-9 border-b pb-2">

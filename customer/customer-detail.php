@@ -84,13 +84,13 @@ $cus = $customer->cusDetail($_GET['cusId']);
                     <div class="flex flex-col w-full mr-5">
                         <span class="text-[13px] px-[5px] bg-white font-[600] pl-5 pb-1">Mã khách hàng</span>
                         <input type="text" name="newsTitle" readonly value="<?= $cus['cusId'] ?>" readonly
-                            class="px-2.5 pl-[20px] py-[10px] w-full border border-solid border-[#d8d8d8] rounded-[6px] outline-0 text-[13px] h-[40px]">
+                            class="px-2.5 bg-[#f2f2f2] pl-[20px] py-[10px] w-full border border-solid border-[#d8d8d8] rounded-[6px] outline-0 text-[13px] h-[40px]">
 
                     </div>
                     <div class="flex flex-col w-full">
                         <span class="text-[13px] px-[5px] bg-white font-[600] pl-5 pb-1">Tên khách hàng</span>
                         <input type="text" name="newsTitle" readonly value="<?= $cus['cusName'] ?>" readonly
-                            class="px-2.5 pl-[20px] py-[10px] w-full border border-solid border-[#d8d8d8] rounded-[6px] outline-0 text-[13px] h-[40px]">
+                            class="px-2.5 bg-[#f2f2f2] pl-[20px] py-[10px] w-full border border-solid border-[#d8d8d8] rounded-[6px] outline-0 text-[13px] h-[40px]">
 
                     </div>
                 </div>
@@ -98,35 +98,35 @@ $cus = $customer->cusDetail($_GET['cusId']);
                     <div class="flex flex-col w-full mr-5">
                         <span class="text-[13px] px-[5px] bg-white font-[600] pl-5 pb-1">Tên người liên hệ</span>
                         <input type="text" name="" readonly value="<?= $cus['cusContact'] ?>" readonly
-                            class="px-2.5 pl-[20px] py-[10px] w-full border border-solid border-[#d8d8d8] rounded-[6px] outline-0 text-[13px] h-[40px]">
+                            class="px-2.5 bg-[#f2f2f2] pl-[20px] py-[10px] w-full border border-solid border-[#d8d8d8] rounded-[6px] outline-0 text-[13px] h-[40px]">
                     </div>
                     <div class="flex flex-col w-full">
                         <span class="text-[13px] px-[5px] bg-white font-[600] pl-5 pb-1">Số điện thoại</span>
                         <input type="text" name="" readonly value="<?= $cus['cusPhone'] ?>" readonly
-                            class="px-2.5 pl-[20px] py-[10px] w-full border border-solid border-[#d8d8d8] rounded-[6px] outline-0 text-[13px] h-[40px]">
+                            class="px-2.5 bg-[#f2f2f2] pl-[20px] py-[10px] w-full border border-solid border-[#d8d8d8] rounded-[6px] outline-0 text-[13px] h-[40px]">
                     </div>
                 </div>
                 <div class="flex flex-col w-full mt-3">
                     <span class="text-[13px] px-[5px] bg-white font-[600] pl-5 pb-1">Địa chỉ</span>
                     <input type="text" name="" readonly value="<?= $cus['cusAddress'] ?>" readonly
-                        class="px-2.5 pl-[20px] py-[10px] w-full border border-solid border-[#d8d8d8] rounded-[6px] outline-0 text-[13px] h-[40px]">
+                        class="px-2.5 bg-[#f2f2f2] pl-[20px] py-[10px] w-full border border-solid border-[#d8d8d8] rounded-[6px] outline-0 text-[13px] h-[40px]">
                 </div>
                 <div class="flex items-center w-full mt-3">
                     <div class="flex flex-col w-full mr-5">
                         <span class="text-[13px] px-[5px] bg-white font-[600] pl-5 pb-1">Số GPP</span>
                         <input type="text" name="" readonly value="<?= $cus['cusGPP'] ?>" readonly
-                            class="px-2.5 pl-[20px] py-[10px] w-full border border-solid border-[#d8d8d8] rounded-[6px] outline-0 text-[13px] h-[40px]">
+                            class="px-2.5 bg-[#f2f2f2] pl-[20px] py-[10px] w-full border border-solid border-[#d8d8d8] rounded-[6px] outline-0 text-[13px] h-[40px]">
                     </div>
                     <div class="flex flex-col w-full">
                         <span class="text-[13px] px-[5px] bg-white font-[600] pl-5 pb-1">Ngày cấp</span>
                         <input type="date" name="" readonly value="<?= $cus['cusGPPDate'] ?>" readonly
-                            class="px-2.5 pl-[20px] py-[10px] w-full border border-solid border-[#d8d8d8] rounded-[6px] outline-0 text-[13px] h-[40px]">
+                            class="px-2.5 bg-[#f2f2f2] pl-[20px] py-[10px] w-full border border-solid border-[#d8d8d8] rounded-[6px] outline-0 text-[13px] h-[40px]">
                     </div>
                 </div>
                 <div class="flex flex-col w-full mt-3">
                     <span class="text-[13px] px-[5px] bg-white font-[600] pl-5 pb-1">Nơi cấp</span>
                     <input type="text" name="" readonly value="<?= $cus['cusGPPAddr'] ?>" readonly
-                        class="px-2.5 pl-[20px] py-[10px] w-full border border-solid border-[#d8d8d8] rounded-[6px] outline-0 text-[13px] h-[40px]">
+                        class="px-2.5 bg-[#f2f2f2] pl-[20px] py-[10px] w-full border border-solid border-[#d8d8d8] rounded-[6px] outline-0 text-[13px] h-[40px]">
                 </div>
             </div>
             <div class="flex flex-col px-[50px] py-[25px]">

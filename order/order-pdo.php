@@ -34,5 +34,15 @@ class Order extends Connection
         $select->execute();
         return $select->fetchAll();
     }
+    public function updateOrder($status, $id){
+        $sql = "UPDATE orders SET orderStatus = $status WHERE orderId = '$id'";
+        $update = $this->prepareSQL($sql);
+        $update->execute();
+    }
+    public function orderDelete($id){
+        $sql = "DELETE FROM product_order WHERE orderId='$id';DELETE FROM orders WHERE orderId = '$id'";
+        $select = $this->prepareSQL($sql);
+        $select->execute();
+    }
 }
 ?>
