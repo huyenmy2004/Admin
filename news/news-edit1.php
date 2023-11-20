@@ -13,7 +13,7 @@ $newsArray = $news->newsDetail($_GET['newsId']);
     <link href="https://fonts.googleapis.com/css2?family=Inter&family=Roboto&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="../asset/image/logo-shortcut.png" type="image/x-icon">
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Chỉnh sửa tin tức</title>
+    <title>Chỉnh sửa quảng cáo</title>
     <style>
         body {
             font-family: "Inter";
@@ -27,8 +27,8 @@ $newsArray = $news->newsDetail($_GET['newsId']);
     <div class="bg-[#505050] bg-opacity-[40%] h-[100vh] w-[100vw] fixed z-10 flex flex-col justify-center items-center hidden"
         id="popupDlt">
         <div class="bg-white absolute p-[40px] flex flex-col justify-center rounded-[8px]">
-            <span class="text-[#0091D0] text-[18px] font-[600] mb-2 flex justify-center">XOÁ TIN TỨC ĐÃ CHỌN?</span>
-            <span class="text-[#505050] text-[13px] mb-4 flex justify-center">Bạn chắc chắn muốn xoá tin tức đã
+            <span class="text-[#0091D0] text-[18px] font-[600] mb-2 flex justify-center">XOÁ quảng cáo ĐÃ CHỌN?</span>
+            <span class="text-[#505050] text-[13px] mb-4 flex justify-center">Bạn chắc chắn muốn xoá quảng cáo đã
                 chọn?</span>
             <div class="flex justify-center">
                 <button
@@ -82,19 +82,19 @@ $newsArray = $news->newsDetail($_GET['newsId']);
             <div class="flex flex-col px-[40px] py-[20px] text-[#505050]">
                 <!-- Breadscumb -->
                 <div class="flex items-center text-[14px]">
-                    <span class="px-1 cursor-pointer" onclick="window.location.href='http://localhost/PharmaDI-Admin/news/news-list.php'">Danh sách tin tức</span>
+                    <span class="px-1 cursor-pointer" onclick="window.location.href='http://localhost/PharmaDI-Admin/news/news-list.php'">Danh sách quảng cáo</span>
                     <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd"
                             d="M1.09327 0.692102C1.35535 0.467463 1.74991 0.497814 1.97455 0.759893L6.97455 6.59323C7.17517 6.82728 7.17517 7.17266 6.97455 7.40672L1.97455 13.24C1.74991 13.5021 1.35535 13.5325 1.09327 13.3078C0.831188 13.0832 0.800837 12.6886 1.02548 12.4266L5.67684 6.99997L1.02548 1.57338C0.800837 1.3113 0.831188 0.916741 1.09327 0.692102Z"
                             fill="#0091D0" />
                     </svg>
-                    <span class="text-[#0091D0] px-1 font-[600]">Chỉnh sửa tin tức</span>
+                    <span class="text-[#0091D0] px-1 font-[600]">Chỉnh sửa quảng cáo</span>
                 </div>
                 <!-- Title -->
                 <div class="flex justify-between items-center py-[25px]">
-                    <span class="text-[#0091D0] font-[600]">CHỈNH SỬA TIN TỨC</span>
+                    <span class="text-[#0091D0] font-[600]">CHỈNH SỬA quảng cáo</span>
                     <button type="button"
-                        class="border-[#15A5E3] border border-solid px-[12px] py-[5px] text-[13px] rounded-[8px] text-[#0091D0]" onclick="document.getElementById('popupDlt').classList.toggle('hidden')">Xoá tin tức</button>
+                        class="border-[#15A5E3] border border-solid px-[12px] py-[5px] text-[13px] rounded-[8px] text-[#0091D0]" onclick="document.getElementById('popupDlt').classList.toggle('hidden')">Xoá quảng cáo</button>
                 </div>
                 <!-- Textbox -->
                 <div class="flex justify-between mt-1 items-center max-h-[40px]">

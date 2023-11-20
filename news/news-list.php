@@ -112,7 +112,7 @@ $pageSize = isset($_GET['pageSize']) ? $_GET['pageSize'] : 10;
             </div>
             <div class="flex flex-col px-[50px] py-[25px]">
                 <div class="flex justify-between items-center">
-                    <span class="text-[#0091D0] font-[600]">DANH SÁCH TIN TỨC</span>
+                    <span class="text-[#0091D0] font-[600]">DANH SÁCH QUẢNG CÁO</span>
                     <button type="button"
                         onclick="window.location.href='http://localhost/PharmaDI-Admin/news/news-create.php'"
                         class="border-[#15A5E3] border border-solid px-[12px] py-[5px] text-[13px] rounded-[8px] text-[#0091D0]">Thêm
@@ -121,8 +121,8 @@ $pageSize = isset($_GET['pageSize']) ? $_GET['pageSize'] : 10;
                 <div class="mt-[20px] text-[#505050]">
                     <div class="grid grid-cols-8 border-b pb-2">
                         <span class="text-[13px] font-[600]">STT</span>
-                        <span class="text-[13px] font-[600]">Mã tin tức</span>
-                        <span class="text-[13px] col-span-4 font-[600]">Tiêu đề tin tức</span>
+                        <span class="text-[13px] font-[600]">Mã quảng cáo</span>
+                        <span class="text-[13px] col-span-4 font-[600]">Tiêu đề quảng cáo</span>
                         <span class="text-[13px] font-[600]">Ngày đăng</span>
                         <span class="text-[13px] font-[600]">Ngày sửa</span>
                     </div>
