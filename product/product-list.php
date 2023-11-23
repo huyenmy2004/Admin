@@ -138,7 +138,7 @@ if (count($products) <= ($page - 1) * $pageSize) {
                 <div class="flex justify-between items-center">
                     <span class="text-[#0091D0] font-[600]">DANH SÁCH SẢN PHẨM</span>
                     <button type="button"
-                        onclick="window.location.href='http://localhost/PharmaDI-Admin/product/product-create.php'"
+                        onclick="window.location.href='http://localhost/PharmaDI-Admin/product/product-new.php'"
                         class="border-[#15A5E3] border border-solid px-[12px] py-[5px] text-[13px] rounded-[8px] text-[#0091D0]">Thêm
                         mới</button>
                 </div>

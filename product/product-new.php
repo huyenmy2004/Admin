@@ -10,7 +10,7 @@ $cate = new Category();
 $cates = $cate->getData();
 $listImg = [];
 
-// $countries = json_decode(file_get_contents('https://restcountries.com/v3.1/all'));
+$countries = json_decode(file_get_contents('https://restcountries.com/v3.1/all'));
 ?>
 
 <head>
